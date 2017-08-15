@@ -29,7 +29,10 @@
     <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>
-    @yield('content')
+  	@include('common.header')
+  	
+  	@yield('content')
+  	
 
     @include('common.footer')
   </body>
