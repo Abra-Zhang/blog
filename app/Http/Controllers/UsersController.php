@@ -12,6 +12,9 @@ class UsersController extends Controller
         return view('users.create');
     }
 
+    /*
+    	用户信息页面
+    */
     public function show(User $user)
     {
         return view('users.show', compact('user'));

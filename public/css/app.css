@@ -8350,6 +8350,8 @@ button.close {
   }
 }
 
+/* common */
+
 a {
   text-decoration: inherit;
   color: inherit;
@@ -8364,6 +8366,33 @@ a:hover {
 main .container {
   padding-top: 70px;
 }
+
+main section.user_info {
+  padding-bottom: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+main section.user_info .gravatar {
+  float: none;
+  max-width: 70px;
+}
+
+main section.user_info h1 {
+  font-size: 1.4em;
+  letter-spacing: -1px;
+  margin-bottom: 3px;
+  margin-top: 15px;
+}
+
+main .gravatar {
+  float: left;
+  margin-right: 10px;
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+/* footer */
 
 footer[role=contentinfo] {
   position: absolute;
