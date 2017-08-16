@@ -8361,6 +8361,10 @@ a:hover {
   transition: 0.1s;
 }
 
+main .container {
+  padding-top: 70px;
+}
+
 footer[role=contentinfo] {
   position: absolute;
   bottom: 0;

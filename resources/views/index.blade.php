@@ -1,5 +1,7 @@
 @extends('common.default')
 
 @section('content')
-@include('common.main')
+	<div class="container">
+        <h1>网站正在建设中。。。</h1>
+   </div>
 @stop
