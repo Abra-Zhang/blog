@@ -28,8 +28,10 @@
   	
   	<main>
       <div class="container">
-        @include('common._messages')
-  		  @yield('content')
+        <div class="col-md-offset-1 col-md-10">
+          @include('common._messages')
+    		  @yield('content')
+        </div>
       </div>
   	</main>
   	
