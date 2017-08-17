@@ -8350,6 +8350,15 @@ button.close {
   }
 }
 
+/* common */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 a {
   text-decoration: inherit;
   color: inherit;
@@ -8361,9 +8370,44 @@ a:hover {
   transition: 0.1s;
 }
 
-main .container {
-  padding-top: 70px;
+.main {
+  position: relative;
+  min-height: 100%;
+  _height: 100%;
+  /* for ie6 因为ie6不支持min-height */
 }
+
+.main .container {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.main section.user_info {
+  padding-bottom: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.main section.user_info .gravatar {
+  float: none;
+  max-width: 70px;
+}
+
+.main section.user_info h1 {
+  font-size: 1.4em;
+  letter-spacing: -1px;
+  margin-bottom: 3px;
+  margin-top: 15px;
+}
+
+.main .gravatar {
+  float: left;
+  margin-right: 10px;
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+/* footer */
 
 footer[role=contentinfo] {
   position: absolute;
@@ -8378,8 +8422,7 @@ footer[role=contentinfo] {
 }
 
 footer[role=contentinfo] .copyright {
-  margin: 0;
   padding: 0;
-  text-transform: uppercase;
+  margin: 0;
 }
 
