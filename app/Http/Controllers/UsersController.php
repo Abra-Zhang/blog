@@ -7,6 +7,9 @@ use App\Models\User;
 
 class UsersController extends Controller
 {
+	/*
+		用户注册页面
+	*/
     public function create()
     {
         return view('users.create');
@@ -18,5 +21,18 @@ class UsersController extends Controller
     public function show(User $user)
     {
         return view('users.show', compact('user'));
+    }
+
+    /*
+    	处理用户注册表单请求
+    */
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|max:50',
+            'email' => 'required|email|unique:users|max:255',
+            'password' => 'required'
+        ]);
+        return;
     }
 }
