@@ -5,6 +5,13 @@
 
 /* common */
 
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 a {
     text-decoration: inherit;
     color: inherit;
@@ -15,9 +22,14 @@ a:hover {
     transition: 0.1s;
 }
 
-main {
+.main {
+    position: relative;
+    min-height: 100%;
+    _height: 100%;
+    /* for ie6 因为ie6不支持min-height */
     .container {
         padding-top: 70px;
+        padding-bottom: 50px;
     }
     section.user_info {
         padding-bottom: 10px;
@@ -55,9 +67,8 @@ footer[role=contentinfo] {
     color: #ccc;
     font-size: 0.75em;
     text-align: center;
-    .copyright {
-        margin: 0;
+    .copyright{
         padding: 0;
-        text-transform: uppercase;
+        margin: 0;
     }
 }
