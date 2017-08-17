@@ -26,11 +26,15 @@
   <body>
   	@include('common.header')
   	
-  	<main>
-  		@yield('content')
-  	</main>
-  	
-  	@include('common.footer')
+  	<div class="main">
+      <div class="container">
+        <div class="col-md-offset-1 col-md-10">
+          @include('common._messages')
+    		  @yield('content')
+        </div>
+      </div>
+      @include('common.footer')
+  	</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
