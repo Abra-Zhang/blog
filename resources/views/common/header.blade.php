@@ -17,8 +17,8 @@
             	<li><a href="#">关于</a></li>
         	</ul>
         <ul class="nav navbar-nav navbar-right">
-        	<li><a href="#">登陆</a></li>
-            <li><a href="signup">注册</a></li>
+        	<li><a href="/login">登陆</a></li>
+            <li><a href="/signup">注册</a></li>
         </ul>
         </div><!--/.nav-collapse -->
       </div>
