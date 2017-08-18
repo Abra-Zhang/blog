@@ -8,6 +8,17 @@ use Auth;
 
 class UsersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', [            
+            'except' => ['show', 'create', 'store']
+        ]);
+
+        $this->middleware('guest', [
+            'only' => ['create']
+        ]);
+    }
+
 	/*
 		用户注册页面
 	*/
@@ -21,6 +32,7 @@ class UsersController extends Controller
     */
     public function show(User $user)
     {
+        $this->authorize('update', $user);
         return view('users.show', compact('user'));
     }
 
@@ -44,5 +56,38 @@ class UsersController extends Controller
         Auth::login($user);
         session()->flash('success', '鲜鱼罐头盒欢迎您的加入~');
         return redirect()->route('users.show', [$user]);
+    }
+
+    /*
+        用户资料编辑
+    */
+    public function edit(User $user)
+    {
+        $this->authorize('update', $user);
+        return view('users.edit', compact('user'));
+    }
+
+    /*
+        更新用户资料
+    */
+    public function update(User $user, Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|max:50',
+            'password' => 'nullable|confirmed|min:6|max:20'
+        ]);
+
+        $this->authorize('update', $user);
+
+        $data = [];
+        $data['name'] = $request->name;
+        if ($request->password) {
+            $data['password'] = bcrypt($request->password);
+        }
+        $user->update($data);
+
+        session()->flash('success', '个人资料更新成功！');
+
+        return redirect()->route('users.show', $user->id);
     }
 }
