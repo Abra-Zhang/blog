@@ -45,4 +45,12 @@ class UsersController extends Controller
         session()->flash('success', '鲜鱼罐头盒欢迎您的加入~');
         return redirect()->route('users.show', [$user]);
     }
+
+    /*
+        用户资料编辑
+    */
+    public function edit(User $user)
+    {
+        return view('users.edit', compact('user'));
+    }
 }
