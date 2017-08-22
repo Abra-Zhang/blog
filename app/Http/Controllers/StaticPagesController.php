@@ -10,4 +10,9 @@ class StaticPagesController extends Controller
     {
         return view('index');
     }
+
+    public function admin_home()
+    {
+        return view('admin.index');
+    }
 }
