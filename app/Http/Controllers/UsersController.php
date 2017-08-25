@@ -10,7 +10,7 @@ class UsersController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', [            
+        $this->middleware('auth', [
             'except' => ['show', 'create', 'store']
         ]);
 
@@ -89,5 +89,53 @@ class UsersController extends Controller
         session()->flash('success', '个人资料更新成功！');
 
         return redirect()->route('users.show', $user->id);
+    }
+
+    /*
+        后台管理入口
+    */
+    public function admin()
+    {
+        $this->authorize('isAdmin', Auth::user());
+        return view('admin.index');
+    }
+
+    /*
+        用户管理入口
+    */
+    public function admin_users()
+    {
+        $this->authorize('isAdmin', Auth::user());
+        $users = User::paginate(10);
+        return view('admin.users', compact('users'));
+    }
+
+    /*
+        文章管理入口
+    */
+    public function admin_articles()
+    {
+        $this->authorize('isAdmin', Auth::user());
+        return view('admin.articles');
+    }
+
+    /*
+        评论管理入口
+    */
+    public function admin_comment()
+    {
+        $this->authorize('isAdmin', Auth::user());
+        return view('admin.comment');
+    }
+
+    /*
+        删除用户
+    */
+    public function destroy(User $user)
+    {
+        $this->authorize('destroy', $user);
+        $user->delete();
+        session()->flash('success', '成功删除用户！');
+        return back();
     }
 }
