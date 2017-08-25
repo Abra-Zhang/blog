@@ -12,7 +12,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
         	<ul class="nav navbar-nav">
-            	<li class="active"><a href="/">首页</a></li>
+            	<li class="active"><a href="{{ route('admin_home') }}">首页</a></li>
             	<li><a href="#">列表</a></li>
             	<li><a href="#">关于</a></li>
         	</ul>
