@@ -99,4 +99,31 @@ class UsersController extends Controller
         $this->authorize('isAdmin', Auth::user());
         return view('admin.index');
     }
+
+    /*
+        用户管理入口
+    */
+    public function admin_users()
+    {
+        $this->authorize('isAdmin', Auth::user());
+        return view('admin.users');
+    }
+
+    /*
+        文章管理入口
+    */
+    public function admin_articles()
+    {
+        $this->authorize('isAdmin', Auth::user());
+        return view('admin.articles');
+    }
+
+    /*
+        评论管理入口
+    */
+    public function admin_comment()
+    {
+        $this->authorize('isAdmin', Auth::user());
+        return view('admin.comment');
+    }
 }
