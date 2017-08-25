@@ -26,4 +26,5 @@ Route::post('login', 'SessionsController@store')->name('login');
 //销毁会话（退出登录）
 Route::delete('logout', 'SessionsController@destroy')->name('logout');
 
-Route::get('/admin', 'StaticPagesController@admin_home')->name('admin_home');
+//后台管理首页
+Route::get('/admin', 'UsersController@admin')->name('admin_home');
