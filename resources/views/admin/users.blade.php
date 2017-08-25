@@ -12,5 +12,7 @@
       </li>
     @endforeach
   </ul>
+
+  {!! $users->render() !!}
 </div>    
 @stop
