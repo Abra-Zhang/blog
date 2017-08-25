@@ -33,4 +33,12 @@ class UserPolicy
     {
         return $user->is_admin;
     }
+
+    /*
+        检查是否拥有删除用户权限
+    */
+    public function destroy(User $currentUser, User $user)
+    {
+        return $currentUser->is_admin && $currentUser->id !== $user->id;
+    }
 }
