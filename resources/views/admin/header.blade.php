@@ -12,7 +12,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
         	<ul class="nav navbar-nav">
-            	<li class="active"><a href="{{ route('admin_home') }}">首页</a></li>
+            	<li class="active"><a href="{{ route('admin_home') }}">后台首页</a></li>
             	<li><a href="{{ route('admin_users') }}">用户管理</a></li>
             	<li><a href="{{ route('admin_articles') }}">文章管理</a></li>
 				<li><a href="{{ route('admin_comment') }}">评论管理</a></li>

@@ -106,7 +106,8 @@ class UsersController extends Controller
     public function admin_users()
     {
         $this->authorize('isAdmin', Auth::user());
-        return view('admin.users');
+        $users = User::all();
+        return view('admin.users', compact('users'));
     }
 
     /*
