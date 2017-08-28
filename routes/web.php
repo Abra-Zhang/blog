@@ -20,7 +20,7 @@ Route::get('signup', 'UsersController@create')->name('signup');
 //用户资源路由
 Route::resource('users', 'UsersController');
 //文章资源路由
-Route::resource('articles', 'ArticlesController');
+Route::resource('/admin/articles', 'ArticlesController');
 
 //显示登陆页面
 Route::get('login', 'SessionsController@create')->name('login');
@@ -33,7 +33,5 @@ Route::delete('logout', 'SessionsController@destroy')->name('logout');
 Route::get('/admin', 'UsersController@admin')->name('admin_home');
 //用户管理
 Route::get('/admin/users', 'UsersController@admin_users')->name('admin_users');
-//文章管理
-Route::get('/admin/articles', 'UsersController@admin_articles')->name('admin_articles');
 //评论管理
 Route::get('/admin/comment', 'UsersController@admin_comment')->name('admin_comment');
