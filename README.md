@@ -34,6 +34,10 @@ dev - 测试分支，各功能开发后合入进行测试，测试通过后合�
 |/app/Policies/||授权策略类|
 ||UserPolicy.php|用户授权类|
 ||||
+|/database/migrations/|||
+||/create_users_table.php|用户表|
+||/add_is_admin_to_users_table.php|为用户表添加 is_admin 字段，判断是否为管理员|
+||||
 |/resources/assets/||sass、js边写目录|
 ||||
 |/resources/views/||blade模板目录|
