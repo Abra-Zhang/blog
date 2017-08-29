@@ -20,7 +20,7 @@ Route::get('signup', 'UsersController@create')->name('signup');
 //用户资源路由
 Route::resource('users', 'UsersController');
 //文章资源路由
-Route::resource('/admin/articles', 'ArticlesController');
+Route::resource('/articles', 'ArticlesController');
 
 //显示登陆页面
 Route::get('login', 'SessionsController@create')->name('login');
