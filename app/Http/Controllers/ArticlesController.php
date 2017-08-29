@@ -45,7 +45,8 @@ class ArticlesController extends Controller
 
     public function edit(Article $article)
     {
-
+        var_dump($user);exit;
+        return view('articles.edit', compact('articles'));
     }
 
     public function update(Article $article, Request $request)

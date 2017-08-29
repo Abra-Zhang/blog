@@ -8,4 +8,10 @@
         <button type="submit" class="btn btn-sm btn-danger delete-btn">删除</button>
       </form>
     @endcan
+
+    @can('update', $article)
+        <form>
+          <button type="submit" class="btn btn-sm btn-primary update-btn">编辑</button>
+        </form>
+    @endcan
 </li>
