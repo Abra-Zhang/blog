@@ -8442,13 +8442,15 @@ section.user_info h1 {
 
 /* Users index */
 
-.users {
+.users,
+.articles {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-.users li {
+.users li,
+.articles li {
   overflow: auto;
   padding: 10px 0;
   border-bottom: 1px solid #eeeeee;
