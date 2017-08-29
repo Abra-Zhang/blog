@@ -27,7 +27,8 @@ class ArticlesController extends Controller
 
     public function create()
     {
-
+        $this->authorize('create');
+        return view('articles.create');
     }
 
     public function show(Article $article)
@@ -42,7 +43,6 @@ class ArticlesController extends Controller
 
     public function edit(Article $article)
     {
-        var_dump($user);exit;
         return view('articles.edit', compact('articles'));
     }
 

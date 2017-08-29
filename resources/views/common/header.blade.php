@@ -24,6 +24,7 @@
                   后台管理 <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
+                  <li><a href="{{ route('write') }}">写文章</a></li>
                   <li><a href="{{ route('users.index') }}">用户列表</a></li>
                   <li><a href="#">评论列表</a></li>
                 </ul>
