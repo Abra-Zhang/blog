@@ -1,4 +1,4 @@
-@extends('admin.default')
+@extends('common.default')
 @section('title', '用户管理')
 
 @section('content')
@@ -6,7 +6,7 @@
   <h1>所有用户</h1>
   <ul class="users">
     @foreach ($users as $user)
-      @include('admin._user')
+      @include('users._user')
     @endforeach
   </ul>
 

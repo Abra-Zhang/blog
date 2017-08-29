@@ -28,10 +28,3 @@ Route::get('login', 'SessionsController@create')->name('login');
 Route::post('login', 'SessionsController@store')->name('login');
 //销毁会话（退出登录）
 Route::delete('logout', 'SessionsController@destroy')->name('logout');
-
-//后台管理首页
-Route::get('/admin', 'UsersController@admin')->name('admin_home');
-//用户管理
-Route::get('/admin/users', 'UsersController@admin_users')->name('admin_users');
-//评论管理
-Route::get('/admin/comment', 'UsersController@admin_comment')->name('admin_comment');
