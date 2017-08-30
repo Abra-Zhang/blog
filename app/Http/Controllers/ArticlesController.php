@@ -21,7 +21,7 @@ class ArticlesController extends Controller
     */
     public function index()
     {
-        $articles = Article::paginate(30);
+        $articles = Article::orderby('created_at', 'desc')->paginate(30);
         return view('articles.index', compact('articles'));
     }
 
@@ -39,7 +39,21 @@ class ArticlesController extends Controller
     public function store(Request $request)
     {
         $this->authorize('create', Article::class);
-        var_dump($request->content);
+        $this->validate($request, [
+            'content' => 'required',
+        ]);
+        if (!isset($request->title)) {
+            $request->title = '无题';
+        }
+
+        $article = Article::create([
+            'title' => $request->title,
+            'content' => $request->content,
+            'user_id' => $request->user_id,
+        ]);
+
+        session()->flash('success', '文章添加成功');
+        return redirect()->route('articles.index');
     }
 
     public function edit(Article $article)
