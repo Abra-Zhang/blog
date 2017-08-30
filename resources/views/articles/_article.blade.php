@@ -10,8 +10,6 @@
     @endcan
 
     @can('update', $article)
-        <form>
-          <button type="submit" class="btn btn-sm btn-primary update-btn">编辑</button>
-        </form>
+        <a href="{{ route('articles.edit', $article->id) }}"><button type="submit" class="btn btn-sm btn-primary update-btn">编辑</button></a>
     @endcan
 </li>
