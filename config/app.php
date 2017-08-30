@@ -177,6 +177,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+        *   editor.md for laravel & qiniu
+        *   https://github.com/LaravelChen/laravel-editormd
+        */
+        LaravelChen\Editormd\EditorMdProvider::class,
+        zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
+
     ],
 
     /*
