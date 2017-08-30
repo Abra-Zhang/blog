@@ -6,10 +6,10 @@
 @section('content')
 <div class="row">
     <div class="col-md-12">
-        <div class="center-block">
+        <div class="article-header">
             <h1>{{  $article->title  }}</h1><br />
+            <div class="byline">{{  $article->created_at  }} By {{  $article->author  }} </div>
         </div>
-        <div class="byline"></div>
         <div class="article-content">
             <div id="wordsView">
                 <textarea style="display:none;" name="editormd-markdown-doc">{{  $article->content  }}</textarea>

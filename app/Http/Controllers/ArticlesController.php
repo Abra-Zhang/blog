@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Article;
 use Auth;
@@ -33,6 +34,7 @@ class ArticlesController extends Controller
 
     public function show(Article $article)
     {
+        $article->author = DB::table("users")->where(['id' => $article->user_id])->value('name');
         return view('articles.show', compact('article'));
     }
 
