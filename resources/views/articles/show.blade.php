@@ -7,6 +7,9 @@
     <div class="col-md-12">
         <h3>{{  $article->name  }}</h3>
         <div class="byline"></div>
+        <div class="article-content">
+            {{  $article->content  }}
+        </div>
     </div>
   </div>
 </div>

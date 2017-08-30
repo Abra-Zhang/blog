@@ -38,7 +38,8 @@ class ArticlesController extends Controller
 
     public function store(Request $request)
     {
-
+        $this->authorize('create', Article::class);
+        var_dump($request->content);
     }
 
     public function edit(Article $article)
