@@ -17,7 +17,7 @@ $factory->define(App\Models\Article::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
-        'name' => "test article by" . $faker->name,
+        'title' => "test article by" . $faker->name,
         'user_id'   => 1,
 		'content'	=> "test content",
         'created_at' => $date_time,
