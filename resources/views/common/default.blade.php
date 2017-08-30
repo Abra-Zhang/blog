@@ -20,12 +20,13 @@
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    @yield('special_css')
     <link rel="stylesheet" href="/css/app.css">
+
   </head>
   <body>
   	@include('common.header')
-  	
+
   	<div class="main">
       <div class="container">
         <div class="col-md-offset-1 col-md-10">
@@ -40,5 +41,6 @@
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    @yield('jshere')
   </body>
 </html>
