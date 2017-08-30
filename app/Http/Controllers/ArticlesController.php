@@ -27,7 +27,7 @@ class ArticlesController extends Controller
 
     public function create()
     {
-        $this->authorize('create');
+        $this->authorize('create', Article::class);
         return view('articles.create');
     }
 
