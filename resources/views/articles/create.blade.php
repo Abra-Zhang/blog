@@ -7,7 +7,7 @@
 <form action="{{  route('articles.store')  }}" method="post">
     {{ csrf_field() }}
     <input type="hidden" name="user_id" value="{{  Auth::user()->id  }}">
-    
+
     <div class="form-group">
     <label>标题</label>
     <input type="text" class="form-control" name="title" placeholder="请在这里填写标题">
@@ -20,4 +20,8 @@
     </div>
     <button class="btn btn-primary" type="submit">提交</button>
 </form>
+@stop
+
+@section('jshere')
+{!! editor_js() !!}
 @stop
