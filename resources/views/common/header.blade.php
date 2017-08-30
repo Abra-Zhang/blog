@@ -13,13 +13,22 @@
         <div id="navbar" class="collapse navbar-collapse">
         	<ul class="nav navbar-nav">
             	<li class="active"><a href="/">首页</a></li>
-            	<li><a href="#">列表</a></li>
+            	<li><a href="{{ route('articles.index') }}">文章列表</a></li>
             	<li><a href="#">关于</a></li>
         	</ul>
         <ul class="nav navbar-nav navbar-right">
             @if (Auth::check())
               @if (Auth::user()->is_admin)
-              <li><a href="{{ route('admin_home') }}">后台管理</a></li>
+			  <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  后台管理 <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="{{ route('write') }}">写文章</a></li>
+                  <li><a href="{{ route('users.index') }}">用户列表</a></li>
+                  <li><a href="#">评论列表</a></li>
+                </ul>
+              </li>
               @endif
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
