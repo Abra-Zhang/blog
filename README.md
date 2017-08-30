@@ -16,9 +16,11 @@ dev - 测试分支，各功能开发后合入进行测试，测试通过后合�
 - [x] 用户管理（列表显示以及删除功能） - 20170822-admin-new
 - [x] 文章相关 - 20170828-articles-new(完成增删改查显示入口和部分初步逻辑，各功能细节需单独开发)
 - [x] 写文章，用了 Editor.md 编辑器 - 20170830-write-articles-new
-- 浏览文章，需要将 markdown 语法转换成 html
+- [x] 浏览文章，需要将 markdown 语法转换成 html - 20170830-read-articles-new
+- [x] 将框架升级至 5.5 LTS - update-laravel-framework
 - 用户验证
 - 评论相关
+- 首页开发
 ...
 
 ## 主要文件结构与文件说明（持续更新，直至结束）
