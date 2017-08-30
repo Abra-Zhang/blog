@@ -13,7 +13,7 @@ class SessionsController extends Controller
             'only' => ['create']
         ]);
     }
-    
+
 	/*
 		登陆页面
 	*/
@@ -35,7 +35,7 @@ class SessionsController extends Controller
        $credentials = [
            'email'    => $request->email,
            'password' => $request->password,
-       ];       
+       ];
 
        if (Auth::attempt($credentials, $request->has('remember'))) {
            session()->flash('success', '欢迎回来！');
