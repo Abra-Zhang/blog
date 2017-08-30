@@ -8468,3 +8468,9 @@ section.user_info h1 {
   right: 0;
 }
 
+/* Article Show */
+
+.article-header {
+  text-align: center;
+}
+
