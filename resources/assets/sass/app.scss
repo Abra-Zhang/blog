@@ -90,9 +90,9 @@ section.user_info {
     }
 }
 
-/* Users index */
+/* Users, Articles index */
 
-.users {
+.users, .articles{
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -101,6 +101,12 @@ section.user_info {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+.update-btn {
+  float: right;
+  position: relative;
+  right: 0;
 }
 
 .delete-btn {
