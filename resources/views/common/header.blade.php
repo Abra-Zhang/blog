@@ -8,7 +8,7 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	        </button>
-	        <a class="navbar-brand" href="{{ route('home') }}">鲜鱼的罐头盒</a>
+	        <a class="navbar-brand" href="{{ route('home') }}">Abra 的罐头盒</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
         	<ul class="nav navbar-nav">

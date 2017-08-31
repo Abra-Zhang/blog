@@ -1,8 +1,7 @@
 @extends('common.default')
 
 @section('content')
-<div class="row">
-<div class="col-md-8">
+<div class="col-md-offset-2 col-md-8">
 	<div class="center-block">
 	<ol class="index-articles">
 	  @foreach ($articles as $article)
@@ -11,6 +10,5 @@
 	</ol>
 	{!! $articles->render() !!}
 	</div>
-</div>
 </div>
 @stop
