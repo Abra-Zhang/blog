@@ -64,7 +64,7 @@ class UsersController extends Controller
         ]);
 
         Auth::login($user);
-        session()->flash('success', 'Abra 罐头盒欢迎您的加入~');
+        session()->flash('success', 'Abra.Z Blog 欢迎您的加入~');
         return redirect()->route('users.show', [$user]);
     }
 
