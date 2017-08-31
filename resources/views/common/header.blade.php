@@ -14,7 +14,6 @@
         	<ul class="nav navbar-nav">
             	<li class="active"><a href="/">首页</a></li>
             	<li><a href="{{ route('articles.index') }}">文章列表</a></li>
-            	<li><a href="#">关于</a></li>
         	</ul>
         <ul class="nav navbar-nav navbar-right">
             @if (Auth::check())
