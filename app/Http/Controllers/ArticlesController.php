@@ -43,7 +43,7 @@ class ArticlesController extends Controller
         $this->authorize('create', Article::class);
         $this->validate($request, [
             'content' => 'required',
-            'summary' => 'required',
+            'abstract' => 'required',
         ]);
         if (!isset($request->title)) {
             $request->title = '无题';
@@ -55,7 +55,7 @@ class ArticlesController extends Controller
         $article = Article::create([
             'title' => $request->title,
             'content' => $request->content,
-            'summary' => $request->summary,
+            'abstract' => $request->abstract,
             'banner' => $request->banner,
             'user_id' => $request->user_id,
         ]);

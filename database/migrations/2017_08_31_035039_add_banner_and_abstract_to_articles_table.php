@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddBannerAndSummaryToArticlesTable extends Migration
+class AddBannerAndAbstractToArticlesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddBannerAndSummaryToArticlesTable extends Migration
     public function up()
     {
         Schema::table('articles', function (Blueprint $table) {
-            $table->text('summary')->comment('文章摘要');
+            $table->text('abstract')->comment('文章摘要');
             $table->string('banner')->default("#")->comment('首页banner图');
         });
     }
@@ -27,7 +27,7 @@ class AddBannerAndSummaryToArticlesTable extends Migration
     public function down()
     {
         Schema::table('articles', function (Blueprint $table) {
-            $table->dropColumn('summary');
+            $table->dropColumn('abstract');
             $table->dropColumn('banner');
         });
     }
