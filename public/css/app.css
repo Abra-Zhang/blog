@@ -8493,6 +8493,12 @@ section.user_info h1 {
   padding-top: 0;
 }
 
+.index-articles .author {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: auto;
+}
+
 .index-articles .gravatar {
   margin-right: 10px;
   margin-top: 5px;
@@ -8500,21 +8506,23 @@ section.user_info h1 {
 
 .index-articles .time {
   color: #777777;
-  display: block;
-  margin-left: 60px;
+  margin-left: 20px;
 }
 
 .index-articles .banner {
   height: 150px;
   width: 150px;
   float: right;
-  margin: auto 5px auto 20px;
+  margin: 10px 5px auto 20px;
+  border-radius: 20%;
 }
 
 .index-articles .title {
+  display: block;
   font-size: 20px;
   font-weight: 700;
   line-height: 1.5;
+  margin-left: 60px;
 }
 
 .index-articles .abstract {
