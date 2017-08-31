@@ -8474,3 +8474,53 @@ section.user_info h1 {
   text-align: center;
 }
 
+/* Index */
+
+.index-articles {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.index-articles li {
+  padding: 10px 0;
+  border-top: 1px solid #e8e8e8;
+  position: relative;
+}
+
+.index-articles .name {
+  margin-top: 5em;
+  padding-top: 0;
+}
+
+.index-articles .gravatar {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.index-articles .time {
+  color: #777777;
+  display: block;
+  margin-left: 60px;
+}
+
+.index-articles .banner {
+  height: 150px;
+  width: 150px;
+}
+
+.index-articles .title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-left: 60px;
+}
+
+.index-articles .abstract {
+  font-size: 13px;
+  line-height: 24px;
+  display: block;
+  margin-left: 60px;
+  word-break: break-word;
+}
+
