@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     protected $fillable = [
-        'title', 'user_id', 'content',
+        'title', 'user_id', 'content', 'abstract', 'banner',
     ];
     /*
         指明一篇文章属于一个用户

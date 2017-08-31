@@ -43,14 +43,20 @@ class ArticlesController extends Controller
         $this->authorize('create', Article::class);
         $this->validate($request, [
             'content' => 'required',
+            'abstract' => 'required',
         ]);
         if (!isset($request->title)) {
             $request->title = '无题';
+        }
+        if (!isset($request->banner)) {
+            $request->banner = '#';
         }
 
         $article = Article::create([
             'title' => $request->title,
             'content' => $request->content,
+            'abstract' => $request->abstract,
+            'banner' => $request->banner,
             'user_id' => $request->user_id,
         ]);
 
