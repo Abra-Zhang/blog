@@ -10,12 +10,16 @@
 
     <div class="form-group">
     <label>标题</label>
-    <input type="text" class="form-control" name="title" placeholder="请在这里填写标题">
+    <input type="text" class="form-control" name="title" placeholder="请在这里填写标题" value="{{ old('title') }}">
+    <label>摘要</label>
+    <input type="text" class="form-control" name="abstract" placeholder="请在这里填写摘要" value="{{ old('abstract') }}">
+    <label>banner</label>
+    <input type="text" class="form-control" name="banner" placeholder="首页banner图片地址" value="{{ old('banner') }}">
     </div>
     <div class="form-group">
         <label>正文</label>
         <div id="editormd_id">
-            <textarea name="content" style="display:none;"></textarea>
+            <textarea name="content" style="display:none;" value="{{ old('content') }}"></textarea>
         </div>
     </div>
     <button class="btn btn-primary" type="submit">提交</button>
