@@ -7,6 +7,9 @@
 <div class="row">
     <div class="col-md-12">
         <div class="article-header">
+            @can('update', $article)
+                <a href="{{ route('articles.edit', $article->id) }}"><button type="submit" class="btn btn-sm btn-primary update-btn">编辑</button></a>
+            @endcan
             <h1>{{  $article->title  }}</h1><br />
             <div class="byline">{{  $article->created_at  }} By {{  $article->author  }} </div>
         </div>
