@@ -72,7 +72,27 @@ class ArticlesController extends Controller
 
     public function update(Article $article, Request $request)
     {
+        $this->validate($request, [
+            'content' => 'required',
+            'abstract' => 'required',
+            'title' =>  'required',
+            'banner' => 'required',
+        ]);
 
+        $this->authorize('update', $article);
+
+        $data = [
+            'title' =>  $request->title,
+            'content' =>  $request->content,
+            'abstract' =>  $request->abstract,
+            'banner' =>  $request->banner,
+        ];
+
+        $article->update($data);
+
+        session()->flash('success', '文章更新成功！');
+
+        return redirect()->route('articles.show', $article->id);
     }
 
     public function destroy(Article $article)
