@@ -1,8 +1,9 @@
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
 // Variables
 @import "variables";
 
 // Bootstrap
-@import "~bootstrap/scss/bootstrap";
+@import "~_bootstrap@4.0.0@bootstrap/scss/bootstrap";
+
+.site-heading {
+  margin: auto -15px;
+}

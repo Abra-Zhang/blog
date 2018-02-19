@@ -12,5 +12,6 @@
 */
 
 Route::get('/', 'HomeController@home')->name('home');
-Route::get('about', 'HomeController@about')->name('about');
-Route::get('articles', 'ArticlesController@index');
+Route::get('/about', 'HomeController@about')->name('about');
+Route::get('/articles', 'ArticlesController@index')->name('articles');
+Route::get('/tags', 'TagsController@index')->name('tags');
