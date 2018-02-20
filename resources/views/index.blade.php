@@ -29,6 +29,7 @@
                         @include('articles._article')
                     @endforeach
 
+                    {{ $articles->links() }}
                 </div>
                 <div class="
                 col-xl-3 offset-xl-0
@@ -38,7 +39,7 @@
                 col-12
                 sidebar-container
                 ">
-
+                    @include('sidebar.default', ['tags'=> $tags])
                 </div>
             </div>
         </div>

@@ -9994,21 +9994,58 @@ a.text-dark:focus {
   }
 }
 
-body a:link {
+@media (max-width: 767px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hidden-xl {
+    display: none !important;
+  }
+}
+
+a:link {
   text-decoration: none;
   color: inherit;
 }
 
-body a:active {
+a:active {
   text-decoration: none;
 }
 
-body a:hover {
+a:hover {
   text-decoration: none;
 }
 
-body a:visited {
+a:visited {
   text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+  line-height: 1.7;
+  line-height: 1.1;
+  font-weight: 700;
 }
 
 body .site-heading {
@@ -10137,5 +10174,43 @@ body .site-heading {
     line-height: 1.3;
     margin-bottom: 8px;
   }
+}
+
+.sidebar-container {
+  color: #bfbfbf;
+  font-size: 14px;
+}
+
+.sidebar-container h5 {
+  color: #ccc;
+  padding-bottom: 1rem;
+  font-size: 14px;
+}
+
+.sidebar-container .tags a {
+  display: inline-block;
+  border: 1px solid #bfbfbf;
+  border-radius: 999em;
+  padding: 0 10px;
+  color: #bfbfbf !important;
+  line-height: 24px;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 0 1px;
+  margin-bottom: 6px;
+}
+
+.sidebar-container .short-about img {
+  width: 80%;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  vertical-align: middle;
+  border: 0;
+}
+
+.sidebar-container .short-about p {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 

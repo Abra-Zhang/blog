@@ -1,0 +1,40 @@
+.sidebar-container {
+  color: #bfbfbf;
+  font-size: 14px;
+
+  h5 {
+    color: #ccc;
+    padding-bottom: 1rem;
+    font-size: 14px;
+  }
+
+  .tags {
+    a {
+      display: inline-block;
+      border: 1px solid #bfbfbf;
+      border-radius: 999em;
+      padding: 0 10px;
+      color: #bfbfbf!important;
+      line-height: 24px;
+      font-size: 12px;
+      text-decoration: none;
+      margin: 0 1px;
+      margin-bottom: 6px;
+    }
+  }
+
+  .short-about {
+    img {
+      width: 80%;
+      display: block;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      vertical-align: middle;
+      border: 0;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
