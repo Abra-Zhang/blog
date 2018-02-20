@@ -9994,7 +9994,24 @@ a.text-dark:focus {
   }
 }
 
-.site-heading {
+body a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+body a:active {
+  text-decoration: none;
+}
+
+body a:hover {
+  text-decoration: none;
+}
+
+body a:visited {
+  text-decoration: none;
+}
+
+body .site-heading {
   margin: auto -15px;
 }
 
@@ -10042,21 +10059,38 @@ a.text-dark:focus {
 
 .index .intro-header .site-heading {
   text-align: center;
-  padding: 150px 0;
   color: #FFF;
 }
 
-.index .intro-header .site-heading h1 {
-  font-size: 80px;
-  line-height: 1.1;
-  font-weight: 700;
-}
-
 .index .intro-header .site-heading .subheading {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.1;
   display: block;
-  font-weight: 700;
+  font-weight: 300;
   margin: 10px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .index .intro-header .site-heading {
+    padding: 95px 0 70px;
+  }
+
+  .index .intro-header .site-heading h1 {
+    font-size: 50px;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .index .intro-header .site-heading {
+    padding: 150px 0;
+  }
+
+  .index .intro-header .site-heading h1 {
+    font-size: 80px;
+    line-height: 1.1;
+    font-weight: 700;
+  }
 }
 

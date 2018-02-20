@@ -4,8 +4,15 @@
 // Bootstrap
 @import "~_bootstrap@4.0.0@bootstrap/scss/bootstrap";
 
-.site-heading {
-  margin: auto -15px;
+body {
+  a:link { text-decoration: none; color:inherit; }
+  a:active { text-decoration:none}
+  a:hover { text-decoration:none;}
+  a:visited { text-decoration: none;}
+
+  .site-heading {
+    margin: auto -15px;
+  }
 }
 // navbar
 @import "navbar";

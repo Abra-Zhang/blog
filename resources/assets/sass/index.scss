@@ -6,19 +6,49 @@
     background-position: center;
     .site-heading {
       text-align: center;
-      padding: 150px 0;
       color: #FFF;
-      h1 {
-        font-size: 80px;
-        line-height: 1.1;
-        font-weight: 700;
-      }
       .subheading {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1.1;
         display: block;
-        font-weight: 700;
+        font-weight: 300;
         margin: 10px 0 0;
+      }
+    }
+  }
+
+  .articles-container {
+
+  }
+}
+
+@media screen and (max-width: 768px){
+  .index {
+    .intro-header {
+      .site-heading {
+        padding: 95px 0 70px;
+
+        h1 {
+          font-size: 50px;
+          line-height: 1.1;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  .index {
+    .intro-header {
+      .site-heading {
+        padding: 150px 0;
+
+        h1 {
+          font-size: 80px;
+          line-height: 1.1;
+          font-weight: 700;
+        }
       }
     }
   }
