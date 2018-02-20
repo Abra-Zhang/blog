@@ -31,6 +31,16 @@
                         <textarea style="display:none;" name="editormd-markdown-doc">{{  $article->content  }}</textarea>
                     </div>
                 </div>
+                <div class="
+                col-xl-8 offset-xl-2
+                col-lg-10 offset-lg-1
+                col-md-10 offset-md-1
+                col-sm-12 offset-sm-0
+                col-12
+                sidebar-container
+                ">
+                    @include('sidebar.article', ['tags'=> $tags])
+                </div>
             </div>
         </div>
     </div>
