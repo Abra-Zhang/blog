@@ -1,0 +1,39 @@
+.navbar-custom {
+  background: rgba(0, 0, 0, 0);
+  border: 0px;
+  z-index: 10;
+
+  // 导航商标
+  .navbar-brand {
+    color: #fff;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 56px;
+  }
+
+  // 导航菜单按钮
+  .navbar-toggler {
+    padding: 0.75rem;
+  }
+
+  // 导航菜单样式
+  .icon-bar {
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin-top: 3px;
+    border-radius: 0;
+    background-color: #fff;
+  }
+
+  // 导航栏目样式
+  #arnold-navbar li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+}

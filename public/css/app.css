@@ -9998,3 +9998,65 @@ a.text-dark:focus {
   margin: auto -15px;
 }
 
+.navbar-custom {
+  background: transparent;
+  border: 0px;
+  z-index: 10;
+}
+
+.navbar-custom .navbar-brand {
+  color: #fff;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 56px;
+}
+
+.navbar-custom .navbar-toggler {
+  padding: 0.75rem;
+}
+
+.navbar-custom .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin-top: 3px;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.navbar-custom #arnold-navbar li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.index .intro-header {
+  background-image: url("/images/banner/index_banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.index .intro-header .site-heading {
+  text-align: center;
+  padding: 150px 0;
+  color: #FFF;
+}
+
+.index .intro-header .site-heading h1 {
+  font-size: 80px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.index .intro-header .site-heading .subheading {
+  font-size: 20px;
+  line-height: 1.1;
+  display: block;
+  font-weight: 700;
+  margin: 10px 0 0;
+}
+
