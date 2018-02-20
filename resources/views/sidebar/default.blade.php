@@ -8,6 +8,10 @@
                     {{ $tag->name }}
                 </a>
             @endforeach
+        @else
+            <a href="#" title="none">
+                还没有标签呢
+            </a>
         @endif
     </div>
 </section>
