@@ -10214,3 +10214,53 @@ body .site-heading {
   margin-bottom: 20px;
 }
 
+.article .intro-header {
+  background-color: #ccc;
+  background-size: cover;
+  background-position: center;
+}
+
+.article .intro-header .site-heading {
+  text-align: center;
+  color: #FFF;
+}
+
+.article .intro-header .site-heading .subheading {
+  font-family: Lora,'Times New Roman',serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.article .editormd-html-preview {
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .article .intro-header .site-heading {
+    padding: 150px 0;
+  }
+
+  .article .intro-header .site-heading h1 {
+    font-size: 80px;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+
+  .article .intro-header .site-heading .subheading {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .article .intro-header .site-heading {
+    padding: 95px 0 70px;
+  }
+
+  .article .intro-header .site-heading h1 {
+    font-size: 50px;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+}
+

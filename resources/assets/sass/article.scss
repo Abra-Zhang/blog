@@ -1,0 +1,56 @@
+.article {
+  .intro-header {
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    .site-heading {
+      text-align: center;
+      color: #FFF;
+      .subheading {
+        font-family: Lora,'Times New Roman',serif;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 18px;
+      }
+    }
+  }
+  .editormd-html-preview {
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .article {
+    .intro-header {
+      .site-heading {
+        padding: 150px 0;
+
+        h1 {
+          font-size: 80px;
+          line-height: 1.1;
+          font-weight: 700;
+        }
+
+        .subheading {
+          font-size: 20px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .article {
+    .intro-header {
+      .site-heading {
+        padding: 95px 0 70px;
+
+        h1 {
+          font-size: 50px;
+          line-height: 1.1;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

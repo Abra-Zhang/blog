@@ -1,6 +1,6 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-sm navbar-custom fixed-top">
-    <a class="navbar-brand" href="#">Arnold Blog</a>
+    <a class="navbar-brand" href="{{ route('home') }}">Arnold Blog</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#arnold-navbar" aria-controls="arnold-navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
