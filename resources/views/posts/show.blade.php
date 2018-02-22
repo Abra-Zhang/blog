@@ -10,7 +10,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="site-heading">
+                        <div class="site-heading text-left">
+                            @if(count($post->tags) > 0)
+                                <div class="tags float-left">
+                                    @foreach($post->tags as $tag)
+                                        <a href="{{ route('tags') }}/#{{ $tag->name }}" title="{{ $tag->name }}">
+                                            {{ $tag->name }}
+                                        </a>
+                                    @endforeach
+                                </div>
+                                <div class="clearfix"></div>
+                            @endif
                             <h1>{{  $post->title  }}</h1>
                             <span class="subheading">Posted by {{ $post->user->name }}, {{ $post->created_at }}</span>
                         </div>
