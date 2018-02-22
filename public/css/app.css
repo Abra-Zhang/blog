@@ -10096,18 +10096,21 @@ body .pagination li {
   letter-spacing: 1px;
 }
 
-.index .intro-header {
+.index .intro-header,
+.posts-index .intro-header {
   background-image: url("/images/banner/index_banner.jpg");
   background-size: cover;
   background-position: center;
 }
 
-.index .intro-header .site-heading {
+.index .intro-header .site-heading,
+.posts-index .intro-header .site-heading {
   text-align: center;
   color: #FFF;
 }
 
-.index .intro-header .site-heading .subheading {
+.index .intro-header .site-heading .subheading,
+.posts-index .intro-header .site-heading .subheading {
   font-size: 18px;
   line-height: 1.1;
   display: block;
@@ -10115,17 +10118,20 @@ body .pagination li {
   margin: 10px 0 0;
 }
 
-.index .posts-container .post-preview .post-title {
+.index .posts-container .post-preview .post-title,
+.posts-index .posts-container .post-preview .post-title {
   margin-top: 30px;
 }
 
-.index .posts-container .post-preview .post-content-preview {
+.index .posts-container .post-preview .post-content-preview,
+.posts-index .posts-container .post-preview .post-content-preview {
   font-size: 13px;
   font-style: italic;
   color: #a3a3a3;
 }
 
-.index .posts-container .post-preview .post-meta {
+.index .posts-container .post-preview .post-meta,
+.posts-index .posts-container .post-preview .post-meta {
   font-family: Lora,'Times New Roman',serif;
   color: #ccc;
   font-size: 16px;
@@ -10133,7 +10139,8 @@ body .pagination li {
   margin-top: 0;
 }
 
-.index hr {
+.index hr,
+.posts-index hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
@@ -10141,11 +10148,13 @@ body .pagination li {
 }
 
 @media screen and (min-width: 768px) {
-  .index .intro-header .site-heading {
+  .index .intro-header .site-heading,
+  .posts-index .intro-header .site-heading {
     padding: 150px 0;
   }
 
-  .index .intro-header .site-heading h1 {
+  .index .intro-header .site-heading h1,
+  .posts-index .intro-header .site-heading h1 {
     font-size: 80px;
     line-height: 1.1;
     font-weight: 700;
@@ -10167,17 +10176,20 @@ body .pagination li {
 }
 
 @media screen and (max-width: 768px) {
-  .index .intro-header .site-heading {
+  .index .intro-header .site-heading,
+  .posts-index .intro-header .site-heading {
     padding: 95px 0 70px;
   }
 
-  .index .intro-header .site-heading h1 {
+  .index .intro-header .site-heading h1,
+  .posts-index .intro-header .site-heading h1 {
     font-size: 50px;
     line-height: 1.1;
     font-weight: 700;
   }
 
-  .index .posts-container .post-preview .post-title {
+  .index .posts-container .post-preview .post-title,
+  .posts-index .posts-container .post-preview .post-title {
     font-size: 21px;
     line-height: 1.3;
     margin-bottom: 8px;
@@ -10220,6 +10232,10 @@ body .pagination li {
 .sidebar-container .short-about p {
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+.posts-index .intro-header {
+  background-image: url("/images/banner/posts_banner.jpg");
 }
 
 .post .intro-header {

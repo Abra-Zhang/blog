@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class PostsController extends Controller
 {
     public function index(){
-        return 'posts index';
+        $posts = post::orderby('created_at', 'desc')->paginate(10);
+        return view('posts.index', compact('posts'));
     }
 
     public function show(Post $post)
