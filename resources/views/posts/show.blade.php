@@ -9,7 +9,12 @@
         <div class="intro-header">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="
+                    col-xl-8 offset-xl-2
+                    col-lg-10 offset-lg-1
+                    col-md-10 offset-md-1
+                    col-sm-12 offset-sm-0
+                    col-12">
                         <div class="site-heading text-left">
                             @if(count($post->tags) > 0)
                                 <div class="tags float-left">
@@ -47,8 +52,7 @@
                 col-md-10 offset-md-1
                 col-sm-12 offset-sm-0
                 col-12
-                sidebar-container
-                ">
+                sidebar-container">
                     @include('sidebar.post', ['tags'=> $tags])
                 </div>
             </div>
