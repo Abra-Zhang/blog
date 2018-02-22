@@ -4,15 +4,15 @@
     {!! editor_css() !!}
 
 @section('content')
-    <div class="article">
+    <div class="post">
         <!-- Page Header -->
         <div class="intro-header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="site-heading">
-                            <h1>{{  $article->title  }}</h1>
-                            <span class="subheading">Posted by {{ $article->user->name }}, {{ $article->created_at }}</span>
+                            <h1>{{  $post->title  }}</h1>
+                            <span class="subheading">Posted by {{ $post->user->name }}, {{ $post->created_at }}</span>
                         </div>
                     </div>
                 </div>
@@ -26,9 +26,9 @@
                 col-md-10 offset-md-1
                 col-sm-12 offset-sm-0
                 col-12
-                article-container">
+                post-container">
                     <div id="wordsView">
-                        <textarea style="display:none;" name="editormd-markdown-doc">{{  $article->content  }}</textarea>
+                        <textarea style="display:none;" name="editormd-markdown-doc">{{  $post->content  }}</textarea>
                     </div>
                 </div>
                 <div class="
@@ -39,7 +39,7 @@
                 col-12
                 sidebar-container
                 ">
-                    @include('sidebar.article', ['tags'=> $tags])
+                    @include('sidebar.post', ['tags'=> $tags])
                 </div>
             </div>
         </div>

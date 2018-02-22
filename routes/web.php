@@ -19,4 +19,4 @@ Route::get('/posts', 'PostsController@index')->name('posts');
 Route::get('/post/{post}', 'PostsController@show')->name('post.show');
 
 // 标签相关路由
-Route::get('/tags', 'TagsController@index')->name('tags');
+Route::get('/tags', 'HomeController@tags')->name('tags');

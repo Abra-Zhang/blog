@@ -11,4 +11,9 @@ class HomeController extends Controller
         $posts = post::orderby('created_at', 'desc')->paginate(10);
         return view('index', compact('posts'));
     }
+
+    public function tags()
+    {
+        return "tags index";
+    }
 }

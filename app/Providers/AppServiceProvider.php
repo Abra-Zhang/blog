@@ -2,9 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Tag;
+use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
-use Carbon\Carbon;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Carbon::setLocale('zh');
-        $tags = [];
+        $tags = tag::get();
         View::share('tags', $tags);
     }
 
