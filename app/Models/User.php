@@ -39,8 +39,8 @@ class User extends Authenticatable
     /*
         一个用户拥有多篇文章
     */
-    public function articles()
+    public function posts()
     {
-        return $this->hasMany(Article::class);
+        return $this->hasMany(Post::class);
     }
 }

@@ -1,5 +1,5 @@
 @extends('common.default')
-@section('title', $article->title)
+@section('title', $post->title)
 @section('specialCss')
     {!! editor_css() !!}
 

@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
     public function home()
     {
-        $articles = Article::orderby('created_at', 'desc')->paginate(10);
+        $posts = post::orderby('created_at', 'desc')->paginate(10);
 //        return 'home';
-        return view('index', compact('articles'));
+        return view('index', compact('posts'));
     }
 }

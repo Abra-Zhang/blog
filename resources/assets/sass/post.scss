@@ -1,4 +1,4 @@
-.article {
+.post {
   .intro-header {
     background-color: #ccc;
     background-size: cover;
@@ -20,7 +20,7 @@
 }
 
 @media screen and (min-width: 768px){
-  .article {
+  .post {
     .intro-header {
       .site-heading {
         padding: 150px 0;
@@ -40,7 +40,7 @@
 }
 
 @media screen and (max-width: 768px){
-  .article {
+  .post {
     .intro-header {
       .site-heading {
         padding: 95px 0 70px;

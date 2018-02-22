@@ -1,5 +1,5 @@
 @extends('common.default')
-
+@section('title', '博文列表')
 @section('content')
     <div class="index">
         <!-- Page Header -->
@@ -8,8 +8,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="site-heading">
-                            <h1>Arnold Blog</h1>
-                            <span class="subheading">————简单生活简单说</span>
+                            <h1>Post Lists</h1>
+                            <span class="subheading">博文列表</span>
                         </div>
                     </div>
                 </div>

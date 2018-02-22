@@ -17,17 +17,17 @@
     }
   }
 
-  .articles-container {
-    .article-preview {
-      .article-title {
+  .posts-container {
+    .post-preview {
+      .post-title {
         margin-top: 30px;
       }
-      .article-content-preview {
+      .post-content-preview {
         font-size: 13px;
         font-style: italic;
         color: #a3a3a3
       }
-      .article-meta {
+      .post-meta {
         font-family: Lora,'Times New Roman',serif;
         color: #ccc;
         font-size: 16px;
@@ -60,17 +60,17 @@
     }
   }
 
-  .articles-container {
-    .article-preview {
-      .article-title {
+  .posts-container {
+    .post-preview {
+      .post-title {
         font-size: 26px;
         line-height: 1.3;
         margin-bottom: 10px;
       }
-      .article-content-preview {
+      .post-content-preview {
         font-size: 14px !important;
       }
-      .article-meta {
+      .post-meta {
         font-size: 18px !important;
       }
     }
@@ -91,9 +91,9 @@
       }
     }
 
-    .articles-container {
-      .article-preview {
-        .article-title {
+    .posts-container {
+      .post-preview {
+        .post-title {
           font-size: 21px;
           line-height: 1.3;
           margin-bottom: 8px;

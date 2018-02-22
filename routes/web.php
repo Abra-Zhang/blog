@@ -15,8 +15,8 @@ Route::get('/', 'HomeController@home')->name('home');
 Route::get('/about', 'HomeController@about')->name('about');
 
 // 文章相关路由
-Route::get('/articles', 'ArticlesController@index')->name('articles');
-Route::get('/article/{article}', 'ArticlesController@show')->name('article.show');
+Route::get('/posts', 'PostsController@index')->name('posts');
+Route::get('/post/{post}', 'PostsController@show')->name('post.show');
 
 // 标签相关路由
 Route::get('/tags', 'TagsController@index')->name('tags');
