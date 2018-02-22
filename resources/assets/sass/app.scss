@@ -14,6 +14,9 @@ body {
   .site-heading {
     margin: auto -15px;
   }
+  .pagination li{
+    margin: auto .3rem;
+  }
 }
 // navbar
 @import "navbar";

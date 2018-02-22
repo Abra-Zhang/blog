@@ -10052,6 +10052,10 @@ body .site-heading {
   margin: auto -15px;
 }
 
+body .pagination li {
+  margin: auto .3rem;
+}
+
 .navbar-custom {
   background: transparent;
   border: 0px;

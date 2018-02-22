@@ -29,7 +29,9 @@
                         @include('articles._article')
                     @endforeach
 
-                    {{ $articles->links() }}
+                    <div class="float-right">
+                        {{ $articles->links() }}
+                    </div>
                 </div>
                 <div class="
                 col-xl-3 offset-xl-0
