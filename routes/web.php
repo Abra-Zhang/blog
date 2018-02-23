@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'HomeController@home')->name('home');
-Route::get('/about', 'HomeController@about')->name('about');
+//Route::get('/about', 'HomeController@about')->name('about');
 
 // 文章相关路由
 Route::get('/posts', 'PostsController@index')->name('posts');

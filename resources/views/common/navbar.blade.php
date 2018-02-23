@@ -15,9 +15,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('posts') }}">Posts</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('about') }}">About</a>
-            </li>
+            {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="{{ route('about') }}">About</a>--}}
+            {{--</li>--}}
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('tags') }}">Tags</a>
             </li>

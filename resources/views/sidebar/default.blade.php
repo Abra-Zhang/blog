@@ -18,7 +18,8 @@
 <!-- Short About -->
 <section class="hidden-sm hidden-md">
     <hr>
-    <h5><a href="{{ route('about') }}">ABOUT ME</a></h5>
+    {{--<h5><a href="{{ route('about') }}">ABOUT ME</a></h5>--}}
+    <h5>ABOUT ME</h5>
     <div class="short-about">
         <img src="/images/arnold.jpg" />
         <p>搞搞前端，弄弄后端<br / >看起来像是做全栈的肥宅</p>
