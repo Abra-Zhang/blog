@@ -12,7 +12,7 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\Models\Article::class, function (Faker\Generator $faker) {
+$factory->define(App\Models\Post::class, function (Faker\Generator $faker) {
 	$date_time = $faker->date . ' ' . $faker->time;
     static $password;
 
