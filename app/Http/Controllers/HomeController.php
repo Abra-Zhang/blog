@@ -14,6 +14,6 @@ class HomeController extends Controller
 
     public function tags()
     {
-        return "tags index";
+        return view('tags.index');
     }
 }

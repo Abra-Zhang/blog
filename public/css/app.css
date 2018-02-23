@@ -10097,20 +10097,23 @@ body .pagination li {
 }
 
 .index .intro-header,
-.posts-index .intro-header {
+.posts-index .intro-header,
+.tags-index .intro-header {
   background-image: url("/images/banner/index_banner.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .index .intro-header .site-heading,
-.posts-index .intro-header .site-heading {
+.posts-index .intro-header .site-heading,
+.tags-index .intro-header .site-heading {
   text-align: center;
   color: #FFF;
 }
 
 .index .intro-header .site-heading .subheading,
-.posts-index .intro-header .site-heading .subheading {
+.posts-index .intro-header .site-heading .subheading,
+.tags-index .intro-header .site-heading .subheading {
   font-size: 18px;
   line-height: 1.1;
   display: block;
@@ -10119,19 +10122,22 @@ body .pagination li {
 }
 
 .index .posts-container .post-preview .post-title,
-.posts-index .posts-container .post-preview .post-title {
+.posts-index .posts-container .post-preview .post-title,
+.tags-index .posts-container .post-preview .post-title {
   margin-top: 30px;
 }
 
 .index .posts-container .post-preview .post-content-preview,
-.posts-index .posts-container .post-preview .post-content-preview {
+.posts-index .posts-container .post-preview .post-content-preview,
+.tags-index .posts-container .post-preview .post-content-preview {
   font-size: 13px;
   font-style: italic;
   color: #a3a3a3;
 }
 
 .index .posts-container .post-preview .post-meta,
-.posts-index .posts-container .post-preview .post-meta {
+.posts-index .posts-container .post-preview .post-meta,
+.tags-index .posts-container .post-preview .post-meta {
   font-family: Lora,'Times New Roman',serif;
   color: #ccc;
   font-size: 16px;
@@ -10140,7 +10146,8 @@ body .pagination li {
 }
 
 .index hr,
-.posts-index hr {
+.posts-index hr,
+.tags-index hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
@@ -10149,12 +10156,14 @@ body .pagination li {
 
 @media screen and (min-width: 768px) {
   .index .intro-header .site-heading,
-  .posts-index .intro-header .site-heading {
+  .posts-index .intro-header .site-heading,
+  .tags-index .intro-header .site-heading {
     padding: 150px 0;
   }
 
   .index .intro-header .site-heading h1,
-  .posts-index .intro-header .site-heading h1 {
+  .posts-index .intro-header .site-heading h1,
+  .tags-index .intro-header .site-heading h1 {
     font-size: 80px;
     line-height: 1.1;
     font-weight: 700;
@@ -10177,19 +10186,22 @@ body .pagination li {
 
 @media screen and (max-width: 768px) {
   .index .intro-header .site-heading,
-  .posts-index .intro-header .site-heading {
+  .posts-index .intro-header .site-heading,
+  .tags-index .intro-header .site-heading {
     padding: 95px 0 70px;
   }
 
   .index .intro-header .site-heading h1,
-  .posts-index .intro-header .site-heading h1 {
+  .posts-index .intro-header .site-heading h1,
+  .tags-index .intro-header .site-heading h1 {
     font-size: 50px;
     line-height: 1.1;
     font-weight: 700;
   }
 
   .index .posts-container .post-preview .post-title,
-  .posts-index .posts-container .post-preview .post-title {
+  .posts-index .posts-container .post-preview .post-title,
+  .tags-index .posts-container .post-preview .post-title {
     font-size: 21px;
     line-height: 1.3;
     margin-bottom: 8px;
@@ -10298,6 +10310,60 @@ body .pagination li {
     font-size: 50px;
     line-height: 1.1;
     font-weight: 700;
+  }
+}
+
+.tags-index .intro-header {
+  background-image: url("/images/banner/tags_banner.jpg");
+}
+
+.tags-index .tags-container .tags {
+  margin: 20px 0 15px 0;
+}
+
+.tags-index .tags-container .tags a {
+  background-color: #0085a1;
+  display: inline-block;
+  border-radius: 999em;
+  padding: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  border: none;
+  line-height: 28px;
+  margin: 0 2px;
+  margin-bottom: 8px;
+}
+
+.tags-index .tags-container .tag-list .tag-name {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1.7;
+  color: #0085a1;
+}
+
+.tags-index .tags-container .tag-list .post-preview .post-title {
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 20px;
+}
+
+.tags-index .tags-container .tag-list .post-preview .post-content-preview,
+.tags-index .tags-container .tag-list .post-preview .post-meta {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .tag-list .post-preview .post-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .tag-list .post-preview .post-title {
+    font-size: 16px;
+    margin-bottom: 8px;
   }
 }
 

@@ -1,4 +1,4 @@
-.index, .posts-index {
+.index, .posts-index, .tags-index {
   .intro-header {
     $url: url("/images/banner/index_banner.jpg");
     background-image: $url;
@@ -46,7 +46,7 @@
 }
 
 @media screen and (min-width: 768px){
-  .index, .posts-index {
+  .index, .posts-index, .tags-index {
     .intro-header {
       .site-heading {
         padding: 150px 0;
@@ -78,7 +78,7 @@
 }
 
 @media screen and (max-width: 768px){
-  .index, .posts-index {
+  .index, .posts-index, .tags-index {
     .intro-header {
       .site-heading {
         padding: 95px 0 70px;
