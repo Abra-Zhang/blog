@@ -11153,6 +11153,9 @@ module.exports = __webpack_require__(37);
 
 __webpack_require__(11);
 
+// 页面滚动时隐藏顶部导航栏
+__webpack_require__(42);
+
 /***/ }),
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -38215,6 +38218,92 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */
+/***/ (function(module, exports) {
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/*
+ *  Bootstrap Auto-Hiding Navbar - v1.0.0
+ *  An extension for Bootstrap's fixed navbar which hides the navbar while the page is scrolling downwards and shows it the other way. The plugin is able to show/hide the navbar programmatically as well.
+ *  http://www.virtuosoft.eu/code/bootstrap-autohidingnavbar/
+ *
+ *  Made by István Ujj-Mészáros
+ *  Under Apache License v2.0 License
+ */
+!function (a, b, c, d) {
+  function e(b, c) {
+    this.element = a(b), this.settings = a.extend({}, w, c), this._defaults = w, this._name = m, this.init();
+  }function f(b) {
+    v && (b.element.addClass("navbar-hidden").animate({ top: -b.element.height() }, { queue: !1, duration: b.settings.animationDuration }), a(".dropdown.open .dropdown-toggle", b.element).dropdown("toggle"), v = !1);
+  }function g(a) {
+    v || (a.element.removeClass("navbar-hidden").animate({ top: 0 }, { queue: !1, duration: a.settings.animationDuration }), v = !0);
+  }function h(a) {
+    var b = n.scrollTop(),
+        c = b - t;if (t = b, 0 > c) {
+      if (v) return;(a.settings.showOnUpscroll || l >= b) && g(a);
+    } else if (c > 0) {
+      if (!v) return void (a.settings.showOnBottom && b + u === o.height() && g(a));b >= l && f(a);
+    }
+  }function i(a) {
+    a.settings.disableAutohide || (s = new Date().getTime(), h(a));
+  }function j(a) {
+    o.on("scroll." + m, function () {
+      new Date().getTime() - s > r ? i(a) : (clearTimeout(p), p = setTimeout(function () {
+        i(a);
+      }, r));
+    }), n.on("resize." + m, function () {
+      clearTimeout(q), q = setTimeout(function () {
+        u = n.height();
+      }, r);
+    });
+  }function k() {
+    o.off("." + m), n.off("." + m);
+  }var l,
+      m = "autoHidingNavbar",
+      n = a(b),
+      o = a(c),
+      p = null,
+      q = null,
+      r = 70,
+      s = 0,
+      t = null,
+      u = n.height(),
+      v = !0,
+      w = { disableAutohide: !1, showOnUpscroll: !0, showOnBottom: !0, hideOffset: "auto", animationDuration: 200 };e.prototype = { init: function init() {
+      return this.elements = { navbar: this.element }, this.setDisableAutohide(this.settings.disableAutohide), this.setShowOnUpscroll(this.settings.showOnUpscroll), this.setShowOnBottom(this.settings.showOnBottom), this.setHideOffset(this.settings.hideOffset), this.setAnimationDuration(this.settings.animationDuration), l = "auto" === this.settings.hideOffset ? this.element.height() : this.settings.hideOffset, j(this), this.element;
+    }, setDisableAutohide: function setDisableAutohide(a) {
+      return this.settings.disableAutohide = a, this.element;
+    }, setShowOnUpscroll: function setShowOnUpscroll(a) {
+      return this.settings.showOnUpscroll = a, this.element;
+    }, setShowOnBottom: function setShowOnBottom(a) {
+      return this.settings.showOnBottom = a, this.element;
+    }, setHideOffset: function setHideOffset(a) {
+      return this.settings.hideOffset = a, this.element;
+    }, setAnimationDuration: function setAnimationDuration(a) {
+      return this.settings.animationDuration = a, this.element;
+    }, show: function show() {
+      return g(this), this.element;
+    }, hide: function hide() {
+      return f(this), this.element;
+    }, destroy: function destroy() {
+      return k(this), g(this), a.data(this, "plugin_" + m, null), this.element;
+    } }, a.fn[m] = function (b) {
+    var c = arguments;if (b === d || "object" == (typeof b === "undefined" ? "undefined" : _typeof(b))) return this.each(function () {
+      a.data(this, "plugin_" + m) || a.data(this, "plugin_" + m, new e(this, b));
+    });if ("string" == typeof b && "_" !== b[0] && "init" !== b) {
+      var f;return this.each(function () {
+        var d = a.data(this, "plugin_" + m);d instanceof e && "function" == typeof d[b] && (f = d[b].apply(d, Array.prototype.slice.call(c, 1)));
+      }), f !== d ? f : this;
+    }
+  };
+}(jQuery, window, document);
 
 /***/ })
 /******/ ]);

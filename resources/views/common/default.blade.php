@@ -17,6 +17,11 @@
 
 @include('common.footer')
 <script src="/js/app.js"></script>
+<script>
+    $(".fixed-top").autoHidingNavbar({
+        showOnBottom : false,
+    });
+</script>
 @yield('specialJs')
 </body>
 </html>
