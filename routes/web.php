@@ -11,22 +11,12 @@
 |
 */
 
-Route::get('/', 'StaticPagesController@home')->name('home');
-Route::get('about', 'StaticPagesController@about')->name('about');
+Route::get('/', 'HomeController@home')->name('home');
+//Route::get('/about', 'HomeController@about')->name('about');
 
-//显示注册页面
-Route::get('signup', 'UsersController@create')->name('signup');
-//新增文章页面
-Route::get('write', 'ArticlesController@create')->name('write');
+// 文章相关路由
+Route::get('/posts', 'PostsController@index')->name('posts');
+Route::get('/post/{post}', 'PostsController@show')->name('post.show');
 
-//用户资源路由
-Route::resource('users', 'UsersController');
-//文章资源路由
-Route::resource('articles', 'ArticlesController');
-
-//显示登陆页面
-Route::get('login', 'SessionsController@create')->name('login');
-//创建新会话（登陆）
-Route::post('login', 'SessionsController@store')->name('login');
-//销毁会话（退出登录）
-Route::delete('logout', 'SessionsController@destroy')->name('logout');
+// 标签相关路由
+Route::get('/tags', 'HomeController@tags')->name('tags');
