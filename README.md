@@ -25,11 +25,13 @@ dev - 测试分支，各功能开发后合入进行测试,以及合并 readme，
 
 ## 版本号及说明
 版本号：主版本号.此版本号.修正版本号
+
 `
 局部修改或 bug 修正时，主版本号和子版本号都不变，修正版本号加 1；
 在原有的基础上增加了部分功能时，主版本号不变，子版本号加 1，修正版本号复位为 0；
 进行了重大修改或局部修正累积较多，导致项目整体发生全局变化时，主版本号加 1；
 `
+* v2.0.1 修改博客页脚样式换行bug
 * v2.0.0 博客前后端分离 & UI 更新, UI 参考了 https://github.com/Huxpro/huxpro.github.io 上面的前端设计，但并未使用其代码；
 * v1.1.0 增加文章修改功能;
 * v1.0.1 修复时间戳问题，以东八区时间为准；
@@ -63,8 +65,6 @@ dev - 测试分支，各功能开发后合入进行测试,以及合并 readme，
 |/resources/views/||blade模板目录|
 ||index.blade.php|首页模板|
 |/resources/views/common/||通用模板模板目录|
-||_errors.blade.php|错误提示模板|
-||_messages.blade.php|消息提示模板|
 ||default.blade.php|博客默认模板|
 ||footer.blade.php|页脚模板|
 ||navbar.blade.php|页眉（导航栏）模板|
