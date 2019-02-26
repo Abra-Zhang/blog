@@ -176,6 +176,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        // https://github.com/WangNingkai/laravel-editor-md  editor.md for laravel
+        WangNingkai\Editor\EditorServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+        // end editor.md for laravel
 
     ],
 
