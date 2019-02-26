@@ -7,12 +7,9 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-8 offset-md-2">
-                <h2>editor.md example</h2>
+                <h2><input type="text" placeholder="标题"></h2>
                 <div id="mdeditor">
-                  <textarea class="form-control" name="content" style="display:none;">
-                    # editor.md for Laravel
-                    >   editor.md example
-                  </textarea>
+                  <textarea class="form-control" name="content" style="display:none;"></textarea>
                 </div>
             </div>
         </div>
