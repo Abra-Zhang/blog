@@ -22,7 +22,6 @@
     <script>
         $('#submit').click(function () {
             $.ajax({
-                {{--url: "{{ route('posts.store') }}",--}}
                 url: "{{ route('posts.store') }}",
                 method: "post",
                 dataType: "json",
