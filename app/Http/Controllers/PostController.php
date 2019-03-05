@@ -48,7 +48,15 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        return ['test'=> $request->all()];
+        $post = new Post;
+        $post->title = $request->input('title');
+        $post->content = $request->input('content');
+        $post->user_id = $request->input('userId');
+        if ($post->save()){
+            return ['code'=> 0, 'msg'=>'success'];
+        }else{
+            return ['code'=> 1, 'msg'=>'fail'];
+        }
     }
 
     /**

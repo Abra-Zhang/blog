@@ -32,6 +32,12 @@
                 },
                 success: function(data) {
                     console.log(data)
+                    if (data.code === 0){
+                        alert('提交成功')
+                        location.reload();
+                    }else{
+                        alert('提交失败')
+                    }
                 },
                   error:function(data){console.log(data.responseText)}
             })
