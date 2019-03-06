@@ -93,13 +93,32 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        $post->title = $request->input('title');
-        $post->content = $request->input('content');
-        if ($post->save()){
-            return ['code'=> 0, 'msg'=>'success'];
-        }else{
-            return ['code'=> 1, 'msg'=>'fail'];
+        $action = $request->input('action');
+        switch ($action){
+            case 'publish':
+                $post->status = !$post->status;
+                $post->timestamps = false;
+                if ($post->save()){
+                    return ['code'=> 0, 'msg'=>'success'];
+                }else{
+                    return ['code'=> 1, 'msg'=>'fail'];
+                }
+                break;
+
+            case 'edit':
+                $post->title = $request->input('title');
+                $post->content = $request->input('content');
+                if ($post->save()){
+                    return ['code'=> 0, 'msg'=>'success'];
+                }else{
+                    return ['code'=> 1, 'msg'=>'fail'];
+                }
+                break;
+
+            default:
+                return ['code'=> 1, 'msg'=>'fail'];
         }
+
 
     }
 

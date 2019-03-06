@@ -26,6 +26,7 @@
                 method: "post",
                 dataType: "json",
                 data: {
+                    action: 'edit',
                     title: $('#postTitle').val(),
                     content: $('#postContent').val(),
                     _method: "PATCH"
