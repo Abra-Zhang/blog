@@ -78,7 +78,10 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+
+        return view('posts.edit', [
+            'post' => $post
+        ]);
     }
 
     /**
@@ -90,7 +93,14 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $post->title = $request->input('title');
+        $post->content = $request->input('content');
+        if ($post->save()){
+            return ['code'=> 0, 'msg'=>'success'];
+        }else{
+            return ['code'=> 1, 'msg'=>'fail'];
+        }
+
     }
 
     /**
