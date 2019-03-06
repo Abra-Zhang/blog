@@ -8,7 +8,7 @@
         <div class="row mt-5">
             <div class="col-md-8 offset-md-2">
                 <h2><input id="postTitle" type="text" placeholder="标题"></h2>
-                <div id="mdeditor">
+                <div id="editormd_id">
                   <textarea id="postContent" class="form-control" name="content" style="display:none;"></textarea>
                 </div>
             </div>
@@ -18,7 +18,6 @@
 @endsection
 @section('js')
     {!! editor_js() !!}
-    {!! editor_config('mdeditor') !!}
     <script>
         $('#submit').click(function () {
             $.ajax({

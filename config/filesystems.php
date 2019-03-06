@@ -63,6 +63,19 @@ return [
             'bucket' => env('AWS_BUCKET'),
         ],
 
+        'qiniu' => [
+            'driver' => 'qiniu',
+            'domains' => [
+                'default' => '', //你的七牛域名
+                'https' => '',         //你的HTTPS域名
+                'custom' => '',                //你的自定义域名
+            ],
+            'access_key' => '',  //AccessKey
+            'secret_key' => '',  //SecretKey
+            'bucket' => '',  //Bucket名字
+            'notify_url' => '',  //持久化处理回调地址
+        ],
+
     ],
 
 ];
