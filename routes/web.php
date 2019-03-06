@@ -20,8 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('dashboard')->group(function () {
-    Route::get('/home', 'DashboardController@index')->name('admin.home');
-    Route::get('/posts', 'DashboardController@posts')->name('admin.posts');
+    Route::get('/home', 'DashboardController@index')->name('dashboard.home');
+    Route::get('/posts', 'DashboardController@posts')->name('dashboard.posts');
 });
 
 Route::resource('posts', 'PostController');

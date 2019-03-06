@@ -34,7 +34,7 @@
                     console.log(data)
                     if (data.code === 0){
                         alert('提交成功')
-                        location.reload();
+                        location.href = " {{ route('dashboard.posts') }}"
                     }else{
                         alert('提交失败')
                     }

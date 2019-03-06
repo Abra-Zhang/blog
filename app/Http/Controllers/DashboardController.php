@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -18,6 +19,9 @@ class DashboardController extends Controller
 
     public function posts()
     {
-        return view('dashboard.posts');
+        $posts = Post::orderBy('created_at', 'desc')->paginate(20);
+        return view('dashboard.posts', [
+            'posts' => $posts,
+        ]);
     }
 }
