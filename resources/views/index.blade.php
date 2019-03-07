@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('components.navbar')
 
     <main role="main" class="container">
         <div class="row">
@@ -101,6 +100,4 @@
         </div><!-- /.row -->
 
     </main><!-- /.container -->
-
-    @include('components.footer ')
 @endsection
