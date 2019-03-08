@@ -8,12 +8,13 @@
 
                 @foreach($posts as $post)
                     <div class="blog-post">
-                        <h2 class="blog-post-title">{{ $post->title }}</h2>
+                        <h2 class="blog-post-title"><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h2>
                         <p class="blog-post-meta">{{ $post->created_at }} by {{ $post->user->name }}</p>
 
                         <div id="post-{{ $post->id }}">
-                            <textarea class="form-control" name="content" style="display:none;">{{ str_limit($post->content, 300, '...') }}</textarea>
+                            <textarea class="form-control" name="content" style="display:none;">{{ str_limit($post->content, 300, ' ... ') }}</textarea>
                         </div>
+                        <a href="{{ route('posts.show', $post->id) }}">阅读更多</a>
                     </div><!-- /.blog-post -->
                 @endforeach
                 {{ $posts->links('components.paginate') }}

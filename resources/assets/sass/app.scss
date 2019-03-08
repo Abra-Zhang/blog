@@ -6,7 +6,7 @@
 
 @import "blog.css";
 
-.blog-list {
+.blog-list, .blog-post h2 {
   a:link,a:visited{color:inherit;text-decoration:none;}
   a:hover{color:inherit;}
 }
