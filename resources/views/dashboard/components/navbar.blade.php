@@ -31,6 +31,7 @@
                             </form>
                         </div>
                     </li>
+                    <li class="nav-item"><a href="{{ route('index') }}" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="{{ route('dashboard.home') }}" class="nav-link">Dashboard</a></li>
                     <li class="nav-item"><a href="{{ route('dashboard.posts') }}" class="nav-link">Posts</a></li>
                 @endif
