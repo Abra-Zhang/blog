@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('dashboard.home') }}">
+        <a class="navbar-brand" href="{{ route('index') }}">
             {{ config('app.name', 'Laravel') }}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -31,8 +31,7 @@
                             </form>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="{{ route('index') }}" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="{{ route('dashboard.home') }}" class="nav-link">Dashboard</a></li>
+                    <li class="nav-item"><a href="{{ route('dashboard.home') }}" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="{{ route('dashboard.posts') }}" class="nav-link">Posts</a></li>
                 @endif
             </ul>
