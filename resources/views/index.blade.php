@@ -5,29 +5,16 @@
     <main role="main" class="container">
         <div class="row">
             <div class="col-md-8 blog-main">
-
                 @foreach($posts as $post)
                     <div class="blog-post">
                         <h2 class="blog-post-title">{{ $post->title }}</h2>
                         <p class="blog-post-meta">{{ $post->created_at }} by {{ $post->user->name }}</p>
 
-                        <div class="wordsView">
-                            <textarea class="form-control" name="content" style="display:none;">{{ $post->content }}</textarea>
+                        <div id="post-{{ $post->id }}">
+                            <textarea class="form-control" name="content" style="display:none;">{{ str_limit($post->content, 300, '...') }}</textarea>
                         </div>
                     </div><!-- /.blog-post -->
                 @endforeach
-
-                <div class="blog-post">
-                    <h2 class="blog-post-title">Another blog post</h2>
-                    <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
-
-                    <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-                    <blockquote>
-                        <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    </blockquote>
-                    <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-                    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                </div><!-- /.blog-post -->
 
                 {{ $posts->links('components.paginate') }}
 
@@ -72,17 +59,20 @@
     <script src="/vendor/editormd/lib/flowchart.min.js"></script>
     <script src="/vendor/editormd/lib/jquery.flowchart.min.js"></script>
     <script type="text/javascript">
+        // 首页博客数组
+        var posts = @json($posts).data;
         $(document).ready(function() {
-            var wordsView;
-            wordsView = editormd.markdownToHTML("wordsView", {
-                htmlDecode      : "style,script,iframe",  // you can filter tags decode
-                emoji           : true,
-                taskList        : true,
-                tex             : true,  // 默认不解析
-                flowChart       : true,  // 默认不解析
-                sequenceDiagram : true,  // 默认不解析
-            });
-
+            $.each(posts, function(post){
+                var wordsView;
+                wordsView = editormd.markdownToHTML("post-"+ posts[post].id, {
+                    htmlDecode      : "style,script,iframe",  // you can filter tags decode
+                    emoji           : true,
+                    taskList        : true,
+                    tex             : true,  // 默认不解析
+                    flowChart       : true,  // 默认不解析
+                    sequenceDiagram : true,  // 默认不解析
+                });
+            })
         })
     </script>
 @endsection
