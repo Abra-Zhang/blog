@@ -1,66 +1,43 @@
-@extends('common.default')
-@section('title', $post->title)
-@section('specialCss')
-    {!! editor_css() !!}
+@extends('layouts.app')
 
+@section('css')
+    {!! editor_css() !!}
+@endsection
 @section('content')
-    <div class="post">
-        <!-- Page Header -->
-        <div class="intro-header">
-            <div class="container">
-                <div class="row">
-                    <div class="
-                    col-xl-8 offset-xl-2
-                    col-lg-10 offset-lg-1
-                    col-md-10 offset-md-1
-                    col-sm-12 offset-sm-0
-                    col-12">
-                        <div class="site-heading text-left">
-                            @if(count($post->tags) > 0)
-                                <div class="tags float-left">
-                                    @foreach($post->tags as $tag)
-                                        <a href="{{ route('tags') }}/#{{ $tag->name }}" title="{{ $tag->name }}">
-                                            {{ $tag->name }}
-                                        </a>
-                                    @endforeach
-                                </div>
-                                <div class="clearfix"></div>
-                            @endif
-                            <h1>{{  $post->title  }}</h1>
-                            <span class="subheading">Posted by {{ $post->user->name }}, {{ $post->created_at }}</span>
-                        </div>
-                    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="text-center">{{ $post->title }}</h1>
+                <div id="wordsView">
+                    <textarea id="postContent" class="form-control" name="content" style="display:none;">{{ $post->content }}</textarea>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="
-                col-xl-8 offset-xl-2
-                col-lg-10 offset-lg-1
-                col-md-10 offset-md-1
-                col-sm-12 offset-sm-0
-                col-12
-                post-container">
-                    <div id="wordsView">
-                        <textarea style="display:none;" name="editormd-markdown-doc">{{  $post->content  }}</textarea>
-                    </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC8zNjcwMy8xMzIzOA==">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
                 </div>
-                <div class="
-                col-xl-8 offset-xl-2
-                col-lg-10 offset-lg-1
-                col-md-10 offset-md-1
-                col-sm-12 offset-sm-0
-                col-12
-                sidebar-container">
-                    @include('sidebar.post', ['tags'=> $tags])
-                </div>
+                <!-- City版安装代码已完成 -->
             </div>
         </div>
     </div>
-@stop
-
-@section('specialJs')
+@endsection
+@section('js')
     <script src="/vendor/editormd/js/editormd.js"></script>
     <script src="/vendor/editormd/lib/marked.min.js"></script>
     <script src="/vendor/editormd/lib/prettify.min.js"></script>
@@ -83,4 +60,4 @@
 
         })
     </script>
-@stop
+@endsection

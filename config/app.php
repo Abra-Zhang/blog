@@ -10,6 +10,7 @@ return [
     | This value is the name of your application. This value is used when the
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
+    |
     */
 
     'name' => env('APP_NAME', 'Laravel'),
@@ -77,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'zh-CN',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -159,14 +160,13 @@ return [
         Illuminate\Redis\RedisServiceProvider::class,
         Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
         Illuminate\Session\SessionServiceProvider::class,
-        Overtrue\LaravelLang\TranslationServiceProvider::class,
+        Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
         /*
          * Package Service Providers...
          */
-        Laravel\Tinker\TinkerServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -178,9 +178,8 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         /*
-        *   editor.md for laravel & qiniu
-        *   https://github.com/LaravelChen/laravel-editormd
-        */
+         * https://github.com/LaravelChen/laravel-editormd    Editormd & qiniu storage
+         */
         LaravelChen\Editormd\EditorMdProvider::class,
         zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
 

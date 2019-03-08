@@ -6,19 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $fillable = [
-        'title', 'user_id', 'content', 'abstract', 'banner',
-    ];
-    /*
-        指明一篇文章属于一个用户
-    */
+    /**
+     * 获得此博文的作者。
+     */
     public function user()
     {
-        return $this->belongsTo(User::class);
-    }
-
-    public function tags()
-    {
-        return $this->belongsToMany('App\Models\Tag', 'posts_to_tags', 'post_id', 'tag_id');
+        return $this->belongsTo('App\Models\User');
     }
 }

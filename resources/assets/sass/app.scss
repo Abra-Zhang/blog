@@ -2,29 +2,11 @@
 @import "variables";
 
 // Bootstrap
-@import "~_bootstrap@4.0.0@bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
 
-// Bootstrap custom
-@import "bootstrap-custom";
+@import "blog.css";
 
-// Custom css
-@import "arnold";
-
-body {
-  .site-heading {
-    margin: auto -15px;
-  }
-  .pagination li{
-    margin: auto .3rem;
-  }
+.blog-list, .blog-post h2 {
+  a:link,a:visited{color:inherit;text-decoration:none;}
+  a:hover{color:inherit;}
 }
-// navbar
-@import "navbar";
-// index css
-@import "index";
-// sidebar
-@import "sidebar";
-// post.show
-@import "post";
-// tags
-@import "tag";
