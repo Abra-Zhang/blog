@@ -27,7 +27,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::where('status', '1')->orderBy('created_at', 'desc')->simplePaginate (10);
+        return view('posts.index', [
+            'posts' => $posts
+        ]);
     }
 
     /**
