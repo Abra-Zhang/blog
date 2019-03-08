@@ -9,11 +9,9 @@ class IndexController extends Controller
 {
     public function index(Request $request)
     {
-        $posts = Post::where('status', '1')->orderBy('created_at', 'desc')->paginate(5);
-//        $page = $request->page?$request->page : 1;
+        $posts = Post::where('status', '1')->orderBy('created_at', 'desc')->simplePaginate (5);
         return view('index',[
             'posts' => $posts,
-//            'page' => $page
         ]);
     }
 }
