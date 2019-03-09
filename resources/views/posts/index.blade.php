@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('css')
+    <style>
+        .table td {
+            padding: 1.75rem!important;
+        }
+    </style>
 @section('content')
     <div class="container">
         <div class="row">
