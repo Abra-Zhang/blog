@@ -27,20 +27,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /*
-        获取用户 Gravatar 头像
-    */
-    public function gravatar($size = '100')
-    {
-        $hash = md5(strtolower(trim($this->attributes['email'])));
-        return "http://www.gravatar.com/avatar/$hash?s=$size";
-    }
-
-    /*
-        一个用户拥有多篇文章
-    */
+    /**
+     * 获得此博文。
+     */
     public function posts()
     {
-        return $this->hasMany(Post::class);
+        return $this->hasMany('App\Models\Post');
     }
 }

@@ -1,39 +1,26 @@
-@extends('common.default')
-@section('title', '博文列表')
-@section('content')
-    <div class="posts-index">
-        <!-- Page Header -->
-        <div class="intro-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="site-heading">
-                            <h1>Post Lists</h1>
-                            <span class="subheading">博文列表</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="
-                col-xl-8 offset-xl-2
-                col-lg-8 offset-lg-2
-                col-md-12
-                col-sm-12
-                col-12
-                posts-container
-                ">
-                    @foreach($posts as $post)
-                        @include('posts._post')
-                    @endforeach
+@extends('layouts.app')
 
-                    <div class="float-right">
-                        {{ $posts->links() }}
-                    </div>
-                </div>
+@section('css')
+    <style>
+        .table td {
+            padding: 1.75rem!important;
+        }
+    </style>
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 blog-list">
+                    <table class="table table-striped">
+                        <tbody>
+                        @foreach($posts as $post)
+                        <tr>
+                            <td><h4><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h4></td>
+                        </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                {{ $posts->links('components.paginate') }}
             </div>
         </div>
     </div>
-@stop
+@endsection

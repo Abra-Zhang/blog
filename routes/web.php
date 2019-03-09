@@ -11,12 +11,13 @@
 |
 */
 
-Route::get('/', 'HomeController@home')->name('home');
-//Route::get('/about', 'HomeController@about')->name('about');
+Route::get('/', 'IndexController@index')->name('index');
 
-// 文章相关路由
-Route::get('/posts', 'PostsController@index')->name('posts');
-Route::get('/post/{post}', 'PostsController@show')->name('post.show');
+Auth::routes();
 
-// 标签相关路由
-Route::get('/tags', 'HomeController@tags')->name('tags');
+Route::prefix('dashboard')->group(function () {
+    Route::get('/home', 'DashboardController@index')->name('dashboard.home');
+    Route::get('/posts', 'DashboardController@posts')->name('dashboard.posts');
+});
+
+Route::resource('posts', 'PostController');
