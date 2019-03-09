@@ -7,6 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="shortcut icon" href="https://cdn.ixiangyun.me/favicon.ico">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('css')
@@ -16,7 +17,7 @@
     @include('components.navbar')
 
     @yield('content')
-    
+
     @include('components.footer ')
 </div>
 
