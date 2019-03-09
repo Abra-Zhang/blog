@@ -8,7 +8,7 @@
                         <tbody>
                         @foreach($posts as $post)
                         <tr>
-                            <td><h3><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h3></td>
+                            <td><h4><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h4></td>
                         </tr>
                         @endforeach
                         </tbody>
