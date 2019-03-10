@@ -26,7 +26,7 @@ class AddStatusInPostsTable extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->tinyInteger('status');
+            $table->dropColumn('status');
         });
     }
 }
