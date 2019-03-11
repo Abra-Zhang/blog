@@ -11,7 +11,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('css')
-    @if(config('env') == 'production')
+    @if(config('app.env') == 'production')
         <script>
             var _hmt = _hmt || [];
             (function () {
