@@ -14,7 +14,7 @@
                         <tbody>
                         @foreach($posts as $post)
                         <tr>
-                            <td><h4><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h4></td>
+                            <td><h4><a href="{{ route('posts.show', $post->getRouteKey()) }}">{{ $post->title }}</a></h4></td>
                         </tr>
                         @endforeach
                         </tbody>

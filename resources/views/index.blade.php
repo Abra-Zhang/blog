@@ -6,15 +6,15 @@
         <div class="row">
             <div class="col-md-8 blog-main">
 
-                @foreach($posts as $post)
+                @foreach($posts as $i => $post)
                     <div class="blog-post">
-                        <h2 class="blog-post-title"><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h2>
+                        <h2 class="blog-post-title"><a href="{{ route('posts.show', $post->getRouteKey()) }}">{{ $post->title }}</a></h2>
                         <p class="blog-post-meta">{{ $post->created_at }} by {{ $post->user->name }}</p>
 
-                        <div id="post-{{ $post->id }}">
+                        <div id="post-{{ $i }}">
                             <textarea class="form-control" name="content" style="display:none;">{{ str_limit($post->content, 300, ' ... ') }}</textarea>
                         </div>
-                        <a href="{{ route('posts.show', $post->id) }}">阅读更多</a>
+                        <a href="{{ route('posts.show', $post->getRouteKey()) }}">阅读更多</a>
                     </div><!-- /.blog-post -->
                 @endforeach
                 {{ $posts->links('components.paginate') }}
@@ -63,9 +63,9 @@
         // 首页博客数组
         var posts = @json($posts).data;
         $(document).ready(function() {
-            $.each(posts, function(post){
+            $.each(posts, function(index, post){
                 var wordsView;
-                wordsView = editormd.markdownToHTML("post-"+ posts[post].id, {
+                wordsView = editormd.markdownToHTML("post-"+ index, {
                     htmlDecode      : "style,script,iframe",  // you can filter tags decode
                     emoji           : true,
                     taskList        : true,
