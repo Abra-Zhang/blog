@@ -183,6 +183,11 @@ return [
         LaravelChen\Editormd\EditorMdProvider::class,
         zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
 
+        /*
+         * vinkla/hashids
+         */
+        Vinkla\Hashids\HashidsServiceProvider::class,
+
     ],
 
     /*
@@ -231,7 +236,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
     ],
 
 ];
