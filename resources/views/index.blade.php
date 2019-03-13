@@ -62,7 +62,6 @@
     <script type="text/javascript">
         // 首页博客数组
         var posts = @json($posts).data;
-        console.log(posts);
         $(document).ready(function() {
             $.each(posts, function(index, post){
                 var wordsView;
