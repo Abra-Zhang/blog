@@ -15,15 +15,15 @@
         </div>
         <div class="row mt-5 mb-3">
             <ul class="col-md-8 offset-md-2 relate-links pt-2 pb-2">
-                @if($previous)
-                    <li><span>上一篇：</span><a href="{{ route('posts.show', $previous->getRouteKey()) }}">{{ $previous->title }}</a></li>
-                @else
-                    <li><span>上一篇：</span><a>没有了</a></li>
-                @endif
                 @if($next)
                     <li><span>下一篇：</span><a href="{{ route('posts.show', $next->getRouteKey()) }}">{{ $next->title }}</a></li>
                 @else
                     <li><span>下一篇：</span><a>没有了</a></li>
+                @endif
+                @if($previous)
+                    <li><span>上一篇：</span><a href="{{ route('posts.show', $previous->getRouteKey()) }}">{{ $previous->title }}</a></li>
+                @else
+                    <li><span>上一篇：</span><a>没有了</a></li>
                 @endif
             </ul>
         </div>
