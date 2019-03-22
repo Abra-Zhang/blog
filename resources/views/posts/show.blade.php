@@ -4,7 +4,7 @@
     {!! editor_css() !!}
 @endsection
 @section('content')
-    <div class="container">
+    <div class="container post-show">
         <div class="row mt-5">
             <div class="col-md-8 offset-md-2">
                 <h1 class="text-center">{{ $post->title }}</h1>
@@ -12,6 +12,20 @@
                     <textarea id="postContent" class="form-control" name="content" style="display:none;">{{ $post->content }}</textarea>
                 </div>
             </div>
+        </div>
+        <div class="row mt-5 mb-3">
+            <ul class="col-md-8 offset-md-2 relate-links pt-2 pb-2">
+                @if($previous)
+                    <li><span>上一篇：</span><a href="{{ route('posts.show', $previous->getRouteKey()) }}">{{ $previous->title }}</a></li>
+                @else
+                    <li><span>上一篇：</span><a>没有了</a></li>
+                @endif
+                @if($next)
+                    <li><span>下一篇：</span><a href="{{ route('posts.show', $next->getRouteKey()) }}">{{ $next->title }}</a></li>
+                @else
+                    <li><span>下一篇：</span><a>没有了</a></li>
+                @endif
+            </ul>
         </div>
         <div class="row">
             <div class="col-md-8 offset-md-2">
