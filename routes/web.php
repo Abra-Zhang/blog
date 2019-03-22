@@ -16,6 +16,7 @@ Route::get('/', 'IndexController@index')->name('index');
 Auth::routes();
 
 Route::prefix('dashboard')->group(function () {
+    Route::get('/', 'DashboardController@index')->name('dashboard.home');
     Route::get('/home', 'DashboardController@index')->name('dashboard.home');
     Route::get('/posts', 'DashboardController@posts')->name('dashboard.posts');
 });
