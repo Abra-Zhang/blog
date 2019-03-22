@@ -10,3 +10,14 @@
   a:link,a:visited{color:inherit;text-decoration:none;}
   a:hover{color:inherit;}
 }
+
+.post-show {
+  .relate-links {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    list-style-type: none;
+    span {
+      color: #B5B5B5;
+    }
+  }
+}

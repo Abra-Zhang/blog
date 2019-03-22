@@ -19,7 +19,7 @@
                     @foreach( $posts as $post )
                         <tr>
                             <th scope="row">{{ $post->id }}</th>
-                            <td>{{ $post->title }}</td>
+                            <td><a href="{{ route('posts.show', $post->getRouteKey()) }}">{{ $post->title }}</a></td>
                             <td>
                                 @if($post->status)
                                     已发布
@@ -30,8 +30,8 @@
                             <td>{{ $post->created_at }}</td>
                             <td>{{ $post->updated_at }}</td>
                             <td>
-                                <a href="{{ route('posts.edit', $post->id) }}">编辑</a>
-                                <a href="#" id="publish" onclick="switchPublish('{{ route('posts.update', $post->id) }}')">更改发布状态</a>
+                                <a href="{{ route('posts.edit', $post->getRouteKey()) }}">编辑</a>
+                                <a href="#" id="publish" onclick="switchPublish('{{ route('posts.update', $post->getRouteKey()) }}')">更改发布状态</a>
                             </td>
                         </tr>
                     @endforeach
