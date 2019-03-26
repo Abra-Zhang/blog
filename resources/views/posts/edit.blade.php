@@ -31,12 +31,11 @@
                     _method: "PATCH"
                 },
                 success: function(data) {
-                    console.log(data)
                     if (data.code === 0){
-                        alert('提交修改成功')
+                        alert('提交修改成功');
                         location.href = " {{ route('dashboard.posts') }}"
                     }else{
-                        alert('提交修改失败')
+                        alert('提交修改失败');
                     }
                 },
                 error:function(data){console.log(data.responseText)}
