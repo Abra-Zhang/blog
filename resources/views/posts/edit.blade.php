@@ -21,7 +21,7 @@
     <script>
         $('#submit').click(function () {
             $.ajax({
-                url: "{{ route('posts.update', $post->id) }}",
+                url: "{{ route('posts.update', $post->getRouteKey()) }}",
                 method: "post",
                 dataType: "json",
                 data: {
