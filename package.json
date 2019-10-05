@@ -19,7 +19,8 @@
         "popper.js": "^1.15.0",
         "resolve-url-loader": "^2.3.2",
         "sass": "^1.23.0",
-        "sass-loader": "^7.3.1"
+        "sass-loader": "^7.3.1",
+        "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
         "imagemin": "^6.1.0"
