@@ -20,7 +20,7 @@
                                         type="email"
                                         class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
                                         name="email"
-                                        value="{{ $email or old('email') }}"
+                                        value="{{ $email ?? old('email') }}"
                                 >
                                 @if ($errors->has('email'))
                                     <div class="invalid-feedback">

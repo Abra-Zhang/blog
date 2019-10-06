@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -26,22 +26,6 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot();
-
-        Route::bind('user', function ($value, $route) {
-            return $this->getModel(\App\Models\User::class, $value);
-        });
-
-        Route::bind('post', function ($value, $route) {
-            return $this->getModel(\App\Models\Post::class, $value);
-        });
-    }
-
-    private function getModel($model, $routeKey)
-    {
-        $id = \Hashids::connection($model)->decode($routeKey)[0] ?? null;
-        $modelInstance = resolve($model);
-
-        return  $modelInstance->findOrFail($id);
     }
 
     /**

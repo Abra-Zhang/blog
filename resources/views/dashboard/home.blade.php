@@ -1,8 +1,5 @@
 @extends('layouts.dashboard')
 
-@section('css')
-    {!! editor_css() !!}
-@endsection
 @section('content')
     <div class="container">
         <div class="row mt-5">
@@ -17,7 +14,6 @@
     </div>
 @endsection
 @section('js')
-    {!! editor_js() !!}
     <script>
         $('#submit').click(function () {
             $.ajax({

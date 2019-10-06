@@ -12,7 +12,7 @@
                         <p class="blog-post-meta">{{ $post->created_at }} by {{ $post->user->name }}</p>
 
                         <div id="post-{{ $i }}">
-                            <textarea class="form-control" name="content" style="display:none;">{{ str_limit($post->content, 300, ' ... ') }}</textarea>
+                            <textarea class="form-control" name="content" style="display:none;">{{ Str::limit($post->content, 300, ' ... ') }}</textarea>
                         </div>
                         <a href="{{ route('posts.show', $post->getRouteKey()) }}">阅读更多</a>
                     </div><!-- /.blog-post -->

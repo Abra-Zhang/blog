@@ -37,7 +37,7 @@ return [
     | may even configure multiple disks of the same driver. Defaults have
     | been setup for each driver as an example of the required options.
     |
-    | Supported Drivers: "local", "ftp", "s3", "rackspace"
+    | Supported Drivers: "local", "ftp", "sftp", "s3"
     |
     */
 
@@ -61,19 +61,7 @@ return [
             'secret' => env('AWS_SECRET_ACCESS_KEY'),
             'region' => env('AWS_DEFAULT_REGION'),
             'bucket' => env('AWS_BUCKET'),
-        ],
-
-        'qiniu' => [
-            'driver' => 'qiniu',
-            'domains' => [
-                'default' => '', //你的七牛域名
-                'https' => env('QINIU_DOMAIN'),         //你的HTTPS域名
-                'custom' => '',                //你的自定义域名
-            ],
-            'access_key' => env('QINIU_ACCESS_KEY'),  //AccessKey
-            'secret_key' => env('QINIU_SECRET_KEY'),  //SecretKey
-            'bucket' => env('QINIU_BUCKET'),  //Bucket名字
-            'notify_url' => env('QINIU_NOTIFY_URL'),  //持久化处理回调地址
+            'url' => env('AWS_URL'),
         ],
 
     ],

@@ -1,8 +1,5 @@
 @extends('layouts.app')
 
-@section('css')
-    {!! editor_css() !!}
-@endsection
 @section('content')
     <div class="container post-show">
         <div class="row mt-5">
