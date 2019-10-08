@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Editormd;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -12,12 +13,12 @@ class DashboardController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    static public function index()
     {
         return view('dashboard.home');
     }
 
-    public function posts()
+    static public function posts()
     {
         $posts = Post::orderBy('created_at', 'desc')->paginate(20);
         return view('dashboard.posts', [

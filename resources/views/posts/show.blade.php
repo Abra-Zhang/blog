@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('css')
+    {!! Editormd::css() !!}
+@endsection()
 @section('content')
     <div class="container post-show">
         <div class="row mt-5">
@@ -49,7 +52,7 @@
     </div>
 @endsection
 @section('js')
-    <script src="/vendor/editormd/js/editormd.js"></script>
+    <script src="/vendor/editormd/js/editormd.min.js"></script>
     <script src="/vendor/editormd/lib/marked.min.js"></script>
     <script src="/vendor/editormd/lib/prettify.min.js"></script>
     <script src="/vendor/editormd/lib/raphael.min.js"></script>
