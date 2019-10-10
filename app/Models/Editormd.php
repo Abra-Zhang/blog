@@ -52,7 +52,7 @@ class Editormd extends Model
 				            sequenceDiagram: ' . config('editormd.sequenceDiagram') . ',
 				            imageUpload: ' . config("editormd.imageUpload") . ',
 				            imageFormats:["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-				            imageUploadURL: "/larvelchen/upload/editormd/image?token=' . csrf_token() .'",
+				            imageUploadURL: "' . config("editormd.imageUploadURL") . '?token=' . csrf_token() .'",
 				        });
 				    })
 				</script>
