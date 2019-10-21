@@ -81,8 +81,9 @@ class EditormdController extends Controller
         	} else {
         		$json = array_replace($json, ['success' => 0, 'meassge' => $validator->messages()]);
         	}
+        } else {
+            $json = array_replace($json, ['success' => 0, 'meassge' => 'no file']);
         }
-        $json = array_replace($json, ['success' => 0, 'meassge' => 'no file']);
     	return response()->json($json);
     }
 }
