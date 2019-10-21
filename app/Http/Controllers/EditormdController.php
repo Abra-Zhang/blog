@@ -18,7 +18,7 @@ class EditormdController extends Controller
     {
     	$json = [
             'success' => 0,
-            'message' => '未知错误',
+            'message' => '',
             'url' => '',
         ];
         $uploadType = config('editormd.upload_type');
@@ -73,16 +73,16 @@ class EditormdController extends Controller
                         		break;
                         }
                     } else {
-                        $json = array_replace($json, ['success' => 0, 'message' => '文件校验失败']);
+                        $json = array_replace($json, ['success' => 0, 'message' => 'file unvalid']);
                     }
         		} else {
-        			$json = array_replace($json, ['success' => 0, 'message' => '文件类型不符合要求']);
+        			$json = array_replace($json, ['success' => 0, 'message' => 'wrong ext']);
         		}
         	} else {
         		$json = array_replace($json, ['success' => 0, 'meassge' => $validator->messages()]);
         	}
         }
-
+        $json = array_replace($json, ['success' => 0, 'meassge' => 'no file']);
     	return response()->json($json);
     }
 }
