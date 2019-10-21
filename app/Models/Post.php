@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
-// use App\Http\Traits\Hashidable;
+use App\Http\Traits\Hashidable;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    // use Hashidable;
+    use Hashidable;
 
     /**
      * 获得此博文的作者。
