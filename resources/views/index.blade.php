@@ -51,7 +51,7 @@
     </main><!-- /.container -->
 @endsection
 @section('js')
-    <script src="/vendor/editormd/js/editormd.js"></script>
+    <script src="/vendor/editormd/js/editormd.min.js"></script>
     <script src="/vendor/editormd/lib/marked.min.js"></script>
     <script src="/vendor/editormd/lib/prettify.min.js"></script>
     <script src="/vendor/editormd/lib/raphael.min.js"></script>
