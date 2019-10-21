@@ -12,7 +12,7 @@
                         <p class="blog-post-meta">{{ $post->created_at }} by {{ $post->user->name }}</p>
 
                         <div id="post-{{ $i }}">
-                            <textarea class="form-control" name="content" style="display:none;">{{ str_limit($post->content, 300, ' ... ') }}</textarea>
+                            <textarea class="form-control" name="content" style="display:none;">{{ Str::limit($post->content, 300, ' ... ') }}</textarea>
                         </div>
                         <a href="{{ route('posts.show', $post->getRouteKey()) }}">阅读更多</a>
                     </div><!-- /.blog-post -->
@@ -51,7 +51,7 @@
     </main><!-- /.container -->
 @endsection
 @section('js')
-    <script src="/vendor/editormd/js/editormd.js"></script>
+    <script src="/vendor/editormd/js/editormd.min.js"></script>
     <script src="/vendor/editormd/lib/marked.min.js"></script>
     <script src="/vendor/editormd/lib/prettify.min.js"></script>
     <script src="/vendor/editormd/lib/raphael.min.js"></script>

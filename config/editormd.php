@@ -1,9 +1,8 @@
 <?php
 return [
     'upload_path' => 'uploads/images/',//上传文件的地址
-    'upload_type' => 'qiniu',//上传的方式qiniu或者本地,默认为本地
-    'upload_http' => 'https',//https或者为空
-    //本地:'',七牛:'qiniu'
+    'upload_type' => 'qiniu',//上传的方式
+    'upload_http' => 'https', //https或者为空
     'width' => '100%',//宽度建议100%
     'height' => '700',//高度
     'theme' => 'default',//顶部的主题分为default和dark
@@ -20,4 +19,5 @@ return [
     'taskList' => 'true',  //任务列表
     'imageUpload' => 'true',  //图片本地上传支持
     'sequenceDiagram' => 'true',  //开启时序/序列图支持
+    'imageUploadURL' => '/editormd/upload/image',
 ];

@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('css')
-    {!! editor_css() !!}
+    {!! Editormd::css() !!}
 @endsection
 @section('content')
     <div class="container">
@@ -17,7 +17,7 @@
     </div>
 @endsection
 @section('js')
-    {!! editor_js() !!}
+    {!! Editormd::js() !!}
     <script>
         $('#submit').click(function () {
             $.ajax({

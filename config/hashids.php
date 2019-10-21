@@ -3,7 +3,7 @@
 /*
  * This file is part of Laravel Hashids.
  *
- * (c) Vincent Klaiber <hello@vinkla.com>
+ * (c) Vincent Klaiber <hello@doubledip.se>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -48,13 +48,14 @@ return [
             'salt' => 'your-salt-string',
             'length' => 'your-length-integer',
         ],
-        \App\Models\User::class => [
+
+       \App\Models\User::class => [
             'salt' => 'users',
-            'length' => 5,
+            'length' => 8,
         ],
         \App\Models\Post::class => [
             'salt' => 'posts',
-            'length' => 5,
+            'length' => 8,
         ]
 
     ],

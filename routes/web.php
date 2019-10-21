@@ -21,4 +21,8 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/posts', 'DashboardController@posts')->name('dashboard.posts');
 });
 
+Route::prefix('editormd')->group(function () {
+	Route::post('/upload/image', 'EditormdController@uploadImage')->name('editormd.imageUpload');
+});
+
 Route::resource('posts', 'PostController');

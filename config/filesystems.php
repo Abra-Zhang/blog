@@ -37,7 +37,7 @@ return [
     | may even configure multiple disks of the same driver. Defaults have
     | been setup for each driver as an example of the required options.
     |
-    | Supported Drivers: "local", "ftp", "s3", "rackspace"
+    | Supported Drivers: "local", "ftp", "sftp", "s3"
     |
     */
 
@@ -61,21 +61,24 @@ return [
             'secret' => env('AWS_SECRET_ACCESS_KEY'),
             'region' => env('AWS_DEFAULT_REGION'),
             'bucket' => env('AWS_BUCKET'),
+            'url' => env('AWS_URL'),
         ],
 
         'qiniu' => [
-            'driver' => 'qiniu',
+            'driver'  => 'qiniu',
             'domains' => [
-                'default' => '', //你的七牛域名
-                'https' => env('QINIU_DOMAIN'),         //你的HTTPS域名
-                'custom' => '',                //你的自定义域名
-            ],
-            'access_key' => env('QINIU_ACCESS_KEY'),  //AccessKey
-            'secret_key' => env('QINIU_SECRET_KEY'),  //SecretKey
-            'bucket' => env('QINIU_BUCKET'),  //Bucket名字
-            'notify_url' => env('QINIU_NOTIFY_URL'),  //持久化处理回调地址
+                'default'   => env('QINIU_URL'),    //你的七牛域名
+                'https'     => env('QINIU_URL'),    //你的HTTPS域名
+                'custom'    => env('QINIU_URL'),    //Useless 没啥用，请直接使用上面的 default 项
+             ],
+            'access_key'=> env('QINIU_ACCESS_KEY'), //AccessKey
+            'secret_key'=> env('QINIU_SECRET_KEY'), //SecretKey
+            'bucket'    => env('QINIU_BUCKET'), //Bucket名字
+            'notify_url'=> env('QINIU_NOTIFY_URL'), //持久化处理回调地址
+            'access'    => 'public',    //空间访问控制 public 或 private
+            'hotlink_prevention_key' => env('QINIU_PREVENTION_KEY'),    // CDN 时间戳防盗链的 key。 设置为 null 则不启用本功能。
+            // 'hotlink_prevention_key' => 'cbab68a279xxxxxxxxxxab509a', // 同上，备用
         ],
-
     ],
 
 ];
