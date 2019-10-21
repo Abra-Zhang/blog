@@ -1,7 +1,8 @@
 <?php
 return [
     'upload_path' => 'uploads/images/',//上传文件的地址
-    'upload_type' => 'local',//上传的方式
+    'upload_type' => 'qiniu',//上传的方式
+    'upload_http' => 'https', //https或者为空
     'width' => '100%',//宽度建议100%
     'height' => '700',//高度
     'theme' => 'default',//顶部的主题分为default和dark
