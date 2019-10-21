@@ -49,6 +49,15 @@ return [
             'length' => 'your-length-integer',
         ],
 
+       \App\Models\User::class => [
+            'salt' => 'users',
+            'length' => 8,
+        ],
+        \App\Models\Post::class => [
+            'salt' => 'posts',
+            'length' => 8,
+        ]
+
     ],
 
 ];
