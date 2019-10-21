@@ -227,6 +227,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Editormd' => App\Models\Editormd::class,
+        'Hashids' => Vinkla\Hashids\Facades\Hashids::class,
 
     ],
 
