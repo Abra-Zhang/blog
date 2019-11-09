@@ -79,10 +79,11 @@ class EditormdController extends Controller
         			$json = array_replace($json, ['success' => 0, 'message' => 'wrong ext']);
         		}
         	} else {
-        		$json = array_replace($json, ['success' => 0, 'meassge' => $validator->messages()]);
+        		$json = array_replace($json, ['success' => 0, 'message' => $validator->messages()]);
         	}
+        } else {
+            $json = array_replace($json, ['success' => 0, 'message' => 'no file']);
         }
-        $json = array_replace($json, ['success' => 0, 'meassge' => 'no file']);
     	return response()->json($json);
     }
 }
