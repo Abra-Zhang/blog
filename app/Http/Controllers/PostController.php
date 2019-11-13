@@ -27,7 +27,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::where('status', '1')->orderBy('created_at', 'desc')->simplePaginate (10);
+        $posts = Post::where('status', '1')->orderBy('created_at', 'desc')->orderBy('id', 'desc')->simplePaginate(10);
         return view('posts.index', [
             'posts' => $posts
         ]);
@@ -55,10 +55,10 @@ class PostController extends Controller
         $post->title = $request->input('title');
         $post->content = $request->input('content');
         $post->user_id = $request->input('userId');
-        if ($post->save()){
-            return ['code'=> 0, 'msg'=>'success'];
-        }else{
-            return ['code'=> 1, 'msg'=>'fail'];
+        if ($post->save()) {
+            return ['code' => 0, 'msg' => 'success'];
+        } else {
+            return ['code' => 1, 'msg' => 'fail'];
         }
     }
 
@@ -113,32 +113,30 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $action = $request->input('action');
-        switch ($action){
+        switch ($action) {
             case 'publish':
                 $post->status = !$post->status;
                 $post->timestamps = false;
-                if ($post->save()){
-                    return ['code'=> 0, 'msg'=>'success'];
-                }else{
-                    return ['code'=> 1, 'msg'=>'fail'];
+                if ($post->save()) {
+                    return ['code' => 0, 'msg' => 'success'];
+                } else {
+                    return ['code' => 1, 'msg' => 'fail'];
                 }
                 break;
 
             case 'edit':
                 $post->title = $request->input('title');
                 $post->content = $request->input('content');
-                if ($post->save()){
-                    return ['code'=> 0, 'msg'=>'success'];
-                }else{
-                    return ['code'=> 1, 'msg'=>'fail'];
+                if ($post->save()) {
+                    return ['code' => 0, 'msg' => 'success'];
+                } else {
+                    return ['code' => 1, 'msg' => 'fail'];
                 }
                 break;
 
             default:
-                return ['code'=> 1, 'msg'=>'fail'];
+                return ['code' => 1, 'msg' => 'fail'];
         }
-
-
     }
 
     /**
