@@ -72,14 +72,16 @@ class PostController extends Controller
     {
         // get previous post id
         $previous = Post::where([
-            ['created_at', '<', $post->created_at],
-            ['status', '=', '1']
+            ['created_at', '<=', $post->created_at],
+            ['status', '=', '1'],
+            ['id', '<', $post->id]
         ])->max('id');
 
         // get next post id
         $next = Post::where([
-            ['created_at', '>', $post->created_at],
-            ['status', '=', '1']
+            ['created_at', '>=', $post->created_at],
+            ['status', '=', '1'],
+            ['id', '>', $post->id]
         ])->min('id');
 
         return view('posts.show', [
