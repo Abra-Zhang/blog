@@ -70,15 +70,15 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        // get previous post id
-        $previous = Post::where([
+        // get next post id
+        $next = Post::where([
             ['created_at', '<=', $post->created_at],
             ['status', '=', '1'],
             ['id', '<', $post->id]
         ])->max('id');
 
-        // get next post id
-        $next = Post::where([
+        // get previous post id
+        $previous = Post::where([
             ['created_at', '>=', $post->created_at],
             ['status', '=', '1'],
             ['id', '>', $post->id]
