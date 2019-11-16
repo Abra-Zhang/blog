@@ -5,10 +5,12 @@
 @endsection()
 @section('content')
 <div class="container post-show">
-    <div class="row mt-5">
+    <div class="row mt-3">
         <div class="col-md-8 offset-md-2">
             <h1 class="text-center">{{ $post->title }}</h1>
-            <div id="wordsView">
+            <p class="post-meta text-center mt-4">{{ $post->created_at }} by {{ $post->user->name }}</p>
+
+            <div id="wordsView" class="mt-4">
                 <textarea id="postContent" class="form-control" name="content" style="display:none;">{{ $post->content }}</textarea>
             </div>
         </div>
