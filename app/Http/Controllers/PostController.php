@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Redis;
 
 class PostController extends Controller
 {
+
+    // 文章Hash key
+    private static $hashKey = "HASH:POST";
+
     /**
      * Create a new controller instance.
      *
@@ -33,14 +37,12 @@ class PostController extends Controller
 
         //可用文章（已发布文章）List key
         $listKey = "LIST:POSTS_ABLE";
-        // 文章Hash key
-        $hashKey = "HASH:POST";
 
         // 先检查Redis中是否存在可用文章
         if (Redis::exists($listKey)) {
             $lists = Redis::lrange($listKey, 0, -1);
             foreach ($lists as $postID) {
-                $posts[] = Redis::hgetall($hashKey . $postID);
+                $posts[] = Redis::hgetall(self::$hashKey . $postID);
             }
         } else {
             // 若没有则从数据库中获取可用文章，并存如Redis
@@ -55,7 +57,7 @@ class PostController extends Controller
             //将可用文章以及可用id存入Redis
             foreach ($posts as $post) {
                 Redis::rpush($listKey, $post['id']);
-                Redis::hmset($hashKey . $post['id'], $post);
+                Redis::hmset(self::$hashKey . $post['id'], $post);
             }
         }
 
@@ -93,9 +95,7 @@ class PostController extends Controller
             $post->routeKey = $post->getRouteKey();
             $post = $post->toArray();
 
-            // 文章Hash key
-            $hashKey = "HASH:POST";
-            Redis::hmset($hashKey . $post['id'], $post);
+            Redis::hmset(self::$hashKey . $post['id'], $post);
 
             return ['code' => 0, 'msg' => 'success'];
         } else {
